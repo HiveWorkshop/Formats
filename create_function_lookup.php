@@ -82,33 +82,13 @@ seq:
     type: strz
     encoding: UTF-8
 
-enums:
-  arg_count:
-    0: arg_count_0
-    1: arg_count_1
-    2: arg_count_2
-    3: arg_count_3
-    4: arg_count_4
-    5: arg_count_5
-    6: arg_count_6
-    7: arg_count_7
-    8: arg_count_8
-    9: arg_count_9
-    10: arg_count_10
-    11: arg_count_11
-    12: arg_count_12
-    13: arg_count_13
-    14: arg_count_14
-    15: arg_count_15
-
 instances:
   argument_count:
-    value:
-      switch-on: name
-      cases:
-';
+    value: \'';
 
 foreach ($functionLookup as $name => $argCount) {
-    echo "        '$name': arg_count::arg_count_$argCount
-";
+    echo "name == \"$name\" ? $argCount : (";
 }
+echo '-1';
+echo str_repeat(')', count($functionLookup));
+echo '\'';
