@@ -73,22 +73,33 @@ foreach ($areas as $area) {
     }
 }
 
-echo '
-meta:
+echo
+'meta:
   id: function_info
+
+types:
+  u4_container:
+    params:
+      - id: value
+        type: u4
+
+instances:
+  argument_count:
+    value: argument_count_container.as<u4_container>.value
 
 seq:
   - id: name
     type: strz
     encoding: UTF-8
-
-instances:
-  argument_count:
-    value: \'';
-
+  - id: argument_count_container
+    size: 0
+    type:
+      switch-on: name
+      cases:
+';
 foreach ($functionLookup as $name => $argCount) {
-    echo "name == \"$name\" ? $argCount : (";
+    echo "        '\"$name\"': u4_container($argCount)
+";
 }
-echo '-1';
-echo str_repeat(')', count($functionLookup));
-echo '\'';
+echo "        _: u4_container(0)
+";

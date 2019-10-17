@@ -57,7 +57,7 @@ types:
       - id: triggers
         type: trigger
         repeat: expr
-        repeat-expr: variable_count
+        repeat-expr: trigger_count
 
   body_post_131:
     seq:
@@ -278,7 +278,7 @@ types:
         if: _root.game == 4 and type == 2
       - id: unknown_1
         type: u4
-        if: _root.game == 7
+        if: _root.game == 7 and has_sub_parameters > 0
       - id: is_array_roc
         type: u4
         if: _root.game == 4 and type != 2
@@ -300,4 +300,4 @@ types:
       - id: arguments
         type: parameter
         repeat: expr
-        repeat-expr: argument_count
+        repeat-expr: function.argument_count
