@@ -73,7 +73,7 @@ class Parameter extends \Kaitai\Struct\Struct {
         if ( (($this->_root()->game() == 4) && ($this->type() == 2)) ) {
             $this->_m_unknown0 = $this->_io->readU4le();
         }
-        if ($this->_root()->game() == 7) {
+        if ( (($this->_root()->game() == 7) && ($this->hasSubParameters() > 0)) ) {
             $this->_m_unknown1 = $this->_io->readU4le();
         }
         if ( (($this->_root()->game() == 4) && ($this->type() != 2)) ) {
@@ -231,10 +231,12 @@ class SubParameters extends \Kaitai\Struct\Struct {
         $this->_m_functionType = $this->_io->readU4le();
         $this->_m_function = new \FunctionInfo\FunctionInfo($this->_io);
         $this->_m_beginSubFunction = $this->_io->readU4le();
-        $this->_m_arguments = [];
-        $n = $this->function()->argumentCount();
-        for ($i = 0; $i < $n; $i++) {
-            $this->_m_arguments[] = new \Wtg\Parameter($this->_io, $this, $this->_root);
+        if ($this->beginSubFunction() > 0) {
+            $this->_m_arguments = [];
+            $n = $this->function()->argumentCount();
+            for ($i = 0; $i < $n; $i++) {
+                $this->_m_arguments[] = new \Wtg\Parameter($this->_io, $this, $this->_root);
+            }
         }
     }
     protected $_m_functionType;

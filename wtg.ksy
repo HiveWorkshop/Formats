@@ -301,3 +301,4 @@ types:
         type: parameter
         repeat: expr
         repeat-expr: function.argument_count
+        if: begin_sub_function > 0
