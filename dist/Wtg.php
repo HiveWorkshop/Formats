@@ -309,8 +309,16 @@ class BodyPost131 extends \Kaitai\Struct\Struct {
         $this->_m_unknown6 = $this->_io->readU4le();
         $this->_m_variables = new \Wtg\Variables($this->_io, $this, $this->_root);
         $this->_m_elementCount = $this->_io->readU4le();
+        $this->_m_unknown7 = $this->_io->readU4le();
+        $this->_m_unknown8 = $this->_io->readU4le();
+        $this->_m_mapName = \Kaitai\Struct\Stream::bytesToStr($this->_io->readBytesTerm(0, false, true, true), "UTF-8");
+        $this->_m_unknown9 = $this->_io->readU4le();
+        $this->_m_unknown10 = $this->_io->readU4le();
+        if ($this->_root()->game() == 7) {
+            $this->_m_unknown11 = $this->_io->readU4le();
+        }
         $this->_m_elements = [];
-        $n = $this->elementCount();
+        $n = ($this->elementCount() - 1);
         for ($i = 0; $i < $n; $i++) {
             $this->_m_elements[] = new \Wtg\Element($this->_io, $this, $this->_root);
         }
@@ -334,6 +342,12 @@ class BodyPost131 extends \Kaitai\Struct\Struct {
     protected $_m_unknown6;
     protected $_m_variables;
     protected $_m_elementCount;
+    protected $_m_unknown7;
+    protected $_m_unknown8;
+    protected $_m_mapName;
+    protected $_m_unknown9;
+    protected $_m_unknown10;
+    protected $_m_unknown11;
     protected $_m_elements;
     public function unknown0() { return $this->_m_unknown0; }
     public function unknown1() { return $this->_m_unknown1; }
@@ -354,12 +368,19 @@ class BodyPost131 extends \Kaitai\Struct\Struct {
     public function unknown6() { return $this->_m_unknown6; }
     public function variables() { return $this->_m_variables; }
     public function elementCount() { return $this->_m_elementCount; }
+    public function unknown7() { return $this->_m_unknown7; }
+    public function unknown8() { return $this->_m_unknown8; }
+    public function mapName() { return $this->_m_mapName; }
+    public function unknown9() { return $this->_m_unknown9; }
+    public function unknown10() { return $this->_m_unknown10; }
+    public function unknown11() { return $this->_m_unknown11; }
     public function elements() { return $this->_m_elements; }
 }
 
+namespace \Wtg;
 
 class Variable extends \Kaitai\Struct\Struct {
-    public function __construct(\Kaitai\Struct\Stream $_io, \Kaitai\Struct\Struct $_parent = null, Wtg $_root = null) {
+    public function __construct(\Kaitai\Struct\Stream $_io, \Kaitai\Struct\Struct $_parent = null, \Wtg $_root = null) {
         parent::__construct($_io, $_parent, $_root);
         $this->_read();
     }
@@ -411,7 +432,9 @@ class Category extends \Kaitai\Struct\Struct {
     private function _read() {
         $this->_m_index = $this->_io->readU4le();
         $this->_m_name = \Kaitai\Struct\Stream::bytesToStr($this->_io->readBytesTerm(0, false, true, true), "UTF-8");
-        $this->_m_isComment = $this->_io->readU4le();
+        if ($this->_root()->game() == 7) {
+            $this->_m_isComment = $this->_io->readU4le();
+        }
         if ($this->_root()->header()->fileVersion() > 7) {
             $this->_m_unknown0 = $this->_io->readU4le();
         }
@@ -487,6 +510,9 @@ class Trigger extends \Kaitai\Struct\Struct {
         if ($this->_root()->game() == 7) {
             $this->_m_isComment = $this->_io->readU4le();
         }
+        if ($this->_root()->header()->fileVersion() > 7) {
+            $this->_m_id = $this->_io->readU4le();
+        }
         $this->_m_isEnabled = $this->_io->readU4le();
         $this->_m_isCustom = $this->_io->readU4le();
         $this->_m_isInitiallyOff = $this->_io->readU4le();
@@ -502,6 +528,7 @@ class Trigger extends \Kaitai\Struct\Struct {
     protected $_m_name;
     protected $_m_description;
     protected $_m_isComment;
+    protected $_m_id;
     protected $_m_isEnabled;
     protected $_m_isCustom;
     protected $_m_isInitiallyOff;
@@ -512,6 +539,7 @@ class Trigger extends \Kaitai\Struct\Struct {
     public function name() { return $this->_m_name; }
     public function description() { return $this->_m_description; }
     public function isComment() { return $this->_m_isComment; }
+    public function id() { return $this->_m_id; }
     public function isEnabled() { return $this->_m_isEnabled; }
     public function isCustom() { return $this->_m_isCustom; }
     public function isInitiallyOff() { return $this->_m_isInitiallyOff; }
