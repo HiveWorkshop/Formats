@@ -116,10 +116,30 @@ types:
       - id: element_count
         type: u4
 
+      - id: unknown_7
+        type: u4
+
+      - id: unknown_8
+        type: u4
+
+      - id: map_name
+        type: strz
+        encoding: UTF-8
+
+      - id: unknown_9
+        type: u4
+
+      - id: unknown_10
+        type: u4
+
+      - id: unknown_11
+        type: u4
+        if: _root.game == 7
+
       - id: elements
         type: element
         repeat: expr
-        repeat-expr: element_count
+        repeat-expr: element_count - 1
 
   deleted_item_ids:
     seq:
@@ -199,6 +219,7 @@ types:
         encoding: UTF-8
       - id: is_comment
         type: u4
+        if: _root.game == 7
       - id: unknown_0
         type: u4
         if: _root.header.file_version > 7
@@ -217,6 +238,9 @@ types:
       - id: is_comment
         type: u4
         if: _root.game == 7
+      - id: id
+        type: u4
+        if: _root.header.file_version > 7
       - id: is_enabled
         type: u4
       - id: is_custom

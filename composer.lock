@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5cef35250e27526cd41ed7842f2f1aa4",
+    "packages": [
+        {
+            "name": "kaitai-io/kaitai_struct_php_runtime",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaitai-io/kaitai_struct_php_runtime.git",
+                "reference": "58fd29117edb8abdfd077fe5d0e6ba6a517011ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaitai-io/kaitai_struct_php_runtime/zipball/58fd29117edb8abdfd077fe5d0e6ba6a517011ea",
+                "reference": "58fd29117edb8abdfd077fe5d0e6ba6a517011ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kaitai\\": "lib/Kaitai"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Kaitai Struct API for PHP",
+            "support": {
+                "source": "https://github.com/kaitai-io/kaitai_struct_php_runtime/tree/master",
+                "issues": "https://github.com/kaitai-io/kaitai_struct_php_runtime/issues"
+            },
+            "time": "2019-04-17T16:05:29+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "kaitai-io/kaitai_struct_php_runtime": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
