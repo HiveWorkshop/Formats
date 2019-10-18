@@ -300,12 +300,12 @@ types:
       - id: unknown_0
         type: u4
         if: _root.game == 4 and type == 2
-      - id: unknown_1
-        type: u4
-        if: _root.game == 7 and has_sub_parameters > 0
       - id: is_array_roc
         type: u4
         if: _root.game == 4 and type != 2
+      - id: unknown_1
+        type: u4
+        if: _root.game == 7 and has_sub_parameters > 0
       - id: is_array_tft
         type: u4
         if: _root.game == 7
@@ -319,10 +319,10 @@ types:
         type: u4
       - id: function
         type: function_info
-      - id: begin_sub_function
+      - id: begin_parameters
         type: u4
       - id: arguments
         type: parameter
         repeat: expr
         repeat-expr: function.argument_count
-        if: begin_sub_function > 0
+        if: begin_parameters > 0

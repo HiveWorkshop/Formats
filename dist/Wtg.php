@@ -73,11 +73,11 @@ class Parameter extends \Kaitai\Struct\Struct {
         if ( (($this->_root()->game() == 4) && ($this->type() == 2)) ) {
             $this->_m_unknown0 = $this->_io->readU4le();
         }
-        if ( (($this->_root()->game() == 7) && ($this->hasSubParameters() > 0)) ) {
-            $this->_m_unknown1 = $this->_io->readU4le();
-        }
         if ( (($this->_root()->game() == 4) && ($this->type() != 2)) ) {
             $this->_m_isArrayRoc = $this->_io->readU4le();
+        }
+        if ( (($this->_root()->game() == 7) && ($this->hasSubParameters() > 0)) ) {
+            $this->_m_unknown1 = $this->_io->readU4le();
         }
         if ($this->_root()->game() == 7) {
             $this->_m_isArrayTft = $this->_io->readU4le();
@@ -91,8 +91,8 @@ class Parameter extends \Kaitai\Struct\Struct {
     protected $_m_hasSubParameters;
     protected $_m_subParameters;
     protected $_m_unknown0;
-    protected $_m_unknown1;
     protected $_m_isArrayRoc;
+    protected $_m_unknown1;
     protected $_m_isArrayTft;
     protected $_m_arrayIndex;
     public function type() { return $this->_m_type; }
@@ -100,8 +100,8 @@ class Parameter extends \Kaitai\Struct\Struct {
     public function hasSubParameters() { return $this->_m_hasSubParameters; }
     public function subParameters() { return $this->_m_subParameters; }
     public function unknown0() { return $this->_m_unknown0; }
-    public function unknown1() { return $this->_m_unknown1; }
     public function isArrayRoc() { return $this->_m_isArrayRoc; }
+    public function unknown1() { return $this->_m_unknown1; }
     public function isArrayTft() { return $this->_m_isArrayTft; }
     public function arrayIndex() { return $this->_m_arrayIndex; }
 }
@@ -230,8 +230,8 @@ class SubParameters extends \Kaitai\Struct\Struct {
     private function _read() {
         $this->_m_functionType = $this->_io->readU4le();
         $this->_m_function = new \FunctionInfo\FunctionInfo($this->_io);
-        $this->_m_beginSubFunction = $this->_io->readU4le();
-        if ($this->beginSubFunction() > 0) {
+        $this->_m_beginParameters = $this->_io->readU4le();
+        if ($this->beginParameters() > 0) {
             $this->_m_arguments = [];
             $n = $this->function()->argumentCount();
             for ($i = 0; $i < $n; $i++) {
@@ -241,11 +241,11 @@ class SubParameters extends \Kaitai\Struct\Struct {
     }
     protected $_m_functionType;
     protected $_m_function;
-    protected $_m_beginSubFunction;
+    protected $_m_beginParameters;
     protected $_m_arguments;
     public function functionType() { return $this->_m_functionType; }
     public function function() { return $this->_m_function; }
-    public function beginSubFunction() { return $this->_m_beginSubFunction; }
+    public function beginParameters() { return $this->_m_beginParameters; }
     public function arguments() { return $this->_m_arguments; }
 }
 

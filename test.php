@@ -16,7 +16,19 @@ while (($f = readdir($dh)) !== false) {
     }
 }
 
-if (in_array('--scan-versions', $argv)) {
+if (in_array('--scan-single', $argv)) {
+    foreach ($argv as $i => $v) {
+        if ($v == '--scan-single') {
+            if (!empty($argv[$i + 1])) {
+                $wtg = \Wtg\Wtg::fromFile($argv[$i + 1]);
+                echo "Success\n";
+            } else {
+                echo "Missing file argument\n";
+            }
+            break;
+        }
+    }
+} elseif (in_array('--scan-versions', $argv)) {
     foreach ($files as $i => $f) {
         $magic = '';
         $version = -1;
