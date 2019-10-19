@@ -206,6 +206,7 @@ seq:
         '"SetMaxCheckpointSaves"': u4_container(1)
         '"SaveGameCheckpoint"': u4_container(2)
         '"SaveGameCheckPointBJ"': u4_container(2)
+        '"LoadGameBJ"': u4_container(2)
         '"SaveAndLoadGameBJ"': u4_container(3)
         '"SaveAndChangeLevelBJ"': u4_container(3)
         '"RenameSaveDirectoryBJ"': u4_container(2)

@@ -5877,6 +5877,11 @@ class FunctionInfo extends \Kaitai\Struct\Struct {
                 $io = new \Kaitai\Struct\Stream($this->_m__raw_argumentCountContainer);
                 $this->_m_argumentCountContainer = new U4Container(1, $io, $this, $this->_root);
                 break;
+            case "LoadGameBJ":
+                $this->_m__raw_argumentCountContainer = $this->_io->readBytes(0);
+                $io = new \Kaitai\Struct\Stream($this->_m__raw_argumentCountContainer);
+                $this->_m_argumentCountContainer = new U4Container(2, $io, $this, $this->_root);
+                break;
             case "OperatorCompareBoolean":
                 $this->_m__raw_argumentCountContainer = $this->_io->readBytes(0);
                 $io = new \Kaitai\Struct\Stream($this->_m__raw_argumentCountContainer);
