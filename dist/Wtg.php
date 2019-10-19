@@ -318,9 +318,10 @@ class BodyPost131 extends \Kaitai\Struct\Struct {
             $this->_m_unknown11 = $this->_io->readU4le();
         }
         $this->_m_elements = [];
-        $n = ($this->elementCount() - 1);
-        for ($i = 0; $i < $n; $i++) {
+        $i = 0;
+        while (!$this->_io->isEof()) {
             $this->_m_elements[] = new \Wtg\Element($this->_io, $this, $this->_root);
+            $i++;
         }
     }
     protected $_m_unknown0;

@@ -6503,6 +6503,7 @@ class FunctionInfo extends \Kaitai\Struct\Struct {
                 $this->_m_argumentCountContainer = new U4Container(2, $io, $this, $this->_root);
                 break;
             default:
+                throw new \Exception("Unknown function {$this->name()}");
                 $this->_m__raw_argumentCountContainer = $this->_io->readBytes(0);
                 $io = new \Kaitai\Struct\Stream($this->_m__raw_argumentCountContainer);
                 $this->_m_argumentCountContainer = new U4Container(0, $io, $this, $this->_root);
