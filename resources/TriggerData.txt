@@ -96,7 +96,6 @@ defeatcondition=0,1,0,WESTRING_TRIGTYPE_defeatcondition
 dialog=0,1,0,WESTRING_TRIGTYPE_dialog
 button=0,1,0,WESTRING_TRIGTYPE_button
 effecttype=1,1,1,WESTRING_TRIGTYPE_effecttype
-commandbuttoneffect=1,1,0,WESTRING_TRIGTYPE_commandbuttoneffect
 texttag=1,1,0,WESTRING_TRIGTYPE_texttag
 gamecache=0,1,0,WESTRING_TRIGTYPE_gamecache
 gamespeed=0,1,1,WESTRING_TRIGTYPE_gamespeed
@@ -111,7 +110,6 @@ itemcode=0,1,1,WESTRING_TRIGTYPE_itemcode,integer
 leaderboard=0,1,0,WESTRING_TRIGTYPE_leaderboard
 lightning=1,1,1,WESTRING_TRIGTYPE_lightning
 lightningtype=1,1,1,WESTRING_TRIGTYPE_lightningtype,string
-minimapicon=1,1,0,WESTRING_TRIGTYPE_minimapicon
 multiboard=1,1,0,WESTRING_TRIGTYPE_multiboard
 ordercode=0,1,1,WESTRING_TRIGTYPE_ordercode,integer
 player=0,1,1,WESTRING_TRIGTYPE_player
@@ -216,7 +214,6 @@ unitorderptarg=0,0,0,WESTRING_TRIGTYPE_unitorderptarg,string
 unitorderdtarg=0,0,0,WESTRING_TRIGTYPE_unitorderdtarg,string
 unitorderitarg=1,0,0,WESTRING_TRIGTYPE_unitorderitarg,string
 unitordernotarg=0,0,0,WESTRING_TRIGTYPE_unitordernotarg,string
-unitorderEx=0,0,0,WESTRING_TRIGTYPE_unitorderEx,string
 heroskillcode=0,0,0,WESTRING_TRIGTYPE_heroskillcode,integer
 weathereffectcode=0,0,0,WESTRING_TRIGTYPE_weathereffectcode,integer
 alliancesetting=0,0,0,WESTRING_TRIGTYPE_alliancesetting,integer
@@ -273,7 +270,6 @@ scriptcode=1,0,0,WESTRING_TRIGTYPE_scriptcode,string
 itemstatus=1,0,0,WESTRING_TRIGTYPE_itemstatus,integer
 itemcodestatus=1,0,0,WESTRING_TRIGTYPE_itemcodestatus,integer
 minimappingstyle=1,0,0,WESTRING_TRIGTYPE_minimappingstyle,integer
-campaignpingstyle=1,0,0,WESTRING_TRIGTYPE_campaignpingstyle,integer
 corpsetype=1,0,0,WESTRING_TRIGTYPE_corpsetype,integer
 stringcaseoption=1,0,0,WESTRING_TRIGTYPE_stringcaseoption,boolean
 
@@ -390,8 +386,6 @@ RealQueueDelayQuest=0,real,bj_QUEUE_DELAY_QUEST,WESTRING_QUEUE_DELAY_QUEST
 RealQueueDelayHint=0,real,bj_QUEUE_DELAY_HINT,WESTRING_QUEUE_DELAY_HINT
 RealQueueDelaySecret=0,real,bj_QUEUE_DELAY_SECRET,WESTRING_QUEUE_DELAY_SECRET
 RealHandicapEasy=0,real,bj_HANDICAP_EASY,WESTRING_HANDICAP_EASY
-RealHandicapDamageEasy=0,real,bj_HANDICAPDAMAGE_EASY,WESTRING_HANDICAPDAMAGE_EASY
-RealHandicapReviveNotHard=0,real,bj_HANDICAPREVIVE_NOTHARD,WESTRING_HANDICAPREVIVE_NOTHARD
 RealCellWidth=0,real,bj_CELLWIDTH,WESTRING_REAL_CELLWIDTH
 RealUnitFacing=0,real,bj_UNIT_FACING,WESTRING_REAL_UNITFACING
 RealCamDefDistance=0,real,bj_CAMERA_DEFAULT_DISTANCE,WESTRING_CAMDEFAULT_DISTANCE
@@ -1941,12 +1935,11 @@ PathingTypeAmphibiousPathing=1,pathingtype,PATHING_TYPE_AMPHIBIOUSPATHING,WESTRI
 // Camera fields
 CameraFieldTargetDistance=0,camerafield,CAMERA_FIELD_TARGET_DISTANCE,WESTRING_CAMERA_TARGETDISTANCE
 CameraFieldFarZ=0,camerafield,CAMERA_FIELD_FARZ,WESTRING_CAMERA_FARZ
-CameraFieldNearZ=0,camerafield,CAMERA_FIELD_NEARZ,WESTRING_CAMERA_NEARZ
 CameraFieldAOA=0,camerafield,CAMERA_FIELD_ANGLE_OF_ATTACK,WESTRING_CAMERA_AOA
 CameraFieldFOV=0,camerafield,CAMERA_FIELD_FIELD_OF_VIEW,WESTRING_CAMERA_FOV
 CameraFieldRoll=0,camerafield,CAMERA_FIELD_ROLL,WESTRING_CAMERA_ROLL
 CameraFieldRotation=0,camerafield,CAMERA_FIELD_ROTATION,WESTRING_CAMERA_ROTATION
-CameraFieldZOffset=0,camerafield,CAMERA_FIELD_ZOFFSET,WESTRING_CAMERA_ZOFFSET
+CameraFieldZOffset=1,camerafield,CAMERA_FIELD_ZOFFSET,WESTRING_CAMERA_ZOFFSET
 CameraFieldLocalPitch=0,camerafield,CAMERA_FIELD_LOCAL_PITCH,WESTRING_CAMERA_LOCAL_PITCH
 CameraFieldLocalYaw=0,camerafield,CAMERA_FIELD_LOCAL_YAW,WESTRING_CAMERA_LOCAL_YAW
 CameraFieldLocalRoll=0,camerafield,CAMERA_FIELD_LOCAL_ROLL,WESTRING_CAMERA_LOCAL_ROLL
@@ -2020,15 +2013,6 @@ ItemcodeStatusPawnable=1,itemcodestatus,bj_ITEMCODE_STATUS_PAWNABLE,WESTRING_ITE
 MinimapPingStyleSimple=1,minimappingstyle,bj_MINIMAPPINGSTYLE_SIMPLE,WESTRING_MINIMAPPINGSTYLE_SIMPLE
 MinimapPingStyleFlashy=1,minimappingstyle,bj_MINIMAPPINGSTYLE_FLASHY,WESTRING_MINIMAPPINGSTYLE_FLASHY
 MinimapPingStyleAttack=1,minimappingstyle,bj_MINIMAPPINGSTYLE_ATTACK,WESTRING_MINIMAPPINGSTYLE_ATTACK
-
-// Campaign Minimap icon styles
-CampaignPingStylePrimary=1,campaignpingstyle,bj_CAMPPINGSTYLE_PRIMARY,WESTRING_CAMPPINGSTYLE_PRIMARY
-CampaignPingStyleBonus=1,campaignpingstyle,bj_CAMPPINGSTYLE_BONUS,WESTRING_CAMPPINGSTYLE_BONUS
-CampaignPingStyleTurnIn=1,campaignpingstyle,bj_CAMPPINGSTYLE_TURNIN,WESTRING_CAMPPINGSTYLE_TURNIN
-CampaignPingStyleBoss=1,campaignpingstyle,bj_CAMPPINGSTYLE_BOSS,WESTRING_CAMPPINGSTYLE_BOSS
-CampaignPingControlPointAlly=1,campaignpingstyle,bj_CAMPPINGSTYLE_CONTROL_ALLY,WESTRING_CAMPPINGSTYLE_CONTROL_ALLY
-CampaignPingControlPointNeutral=1,campaignpingstyle,bj_CAMPPINGSTYLE_CONTROL_NEUTRAL,WESTRING_CAMPPINGSTYLE_CONTROL_NEUTRAL
-CampaignPingControlPointEnemy=1,campaignpingstyle,bj_CAMPPINGSTYLE_CONTROL_ENEMY,WESTRING_CAMPPINGSTYLE_CONTROL_ENEMY
 
 // Corpse creation styles
 CorpseTypeFlesh=1,corpsetype,bj_CORPSETYPE_FLESH,WESTRING_CORPSETYPE_FLESH
@@ -2392,9 +2376,6 @@ GameEventTourneyNow=1,gameevent,EVENT_GAME_TOURNAMENT_FINISH_NOW,WESTRING_GAMEEV
 // Tutorial
 MissionIndexT00=0,missionindex,bj_MISSION_INDEX_T00,WESTRING_MISSION_INDEX_T00
 MissionIndexT01=0,missionindex,bj_MISSION_INDEX_T01,WESTRING_MISSION_INDEX_T01
-MissionIndexT02=0,missionindex,bj_MISSION_INDEX_T02,WESTRING_MISSION_INDEX_T02
-MissionIndexT03=0,missionindex,bj_MISSION_INDEX_T03,WESTRING_MISSION_INDEX_T03
-MissionIndexT04=0,missionindex,bj_MISSION_INDEX_T04,WESTRING_MISSION_INDEX_T04
 // Human
 MissionIndexH00=0,missionindex,bj_MISSION_INDEX_H00,WESTRING_MISSION_INDEX_H00
 MissionIndexH01=0,missionindex,bj_MISSION_INDEX_H01,WESTRING_MISSION_INDEX_H01
@@ -2848,303 +2829,6 @@ UnitOrderMedivhUnRavenForm=0,unitordernotarg,`unravenform`,WESTRING_UNITORDERNOT
 UnitOrderRexxarBattleRoar=1,unitordernotarg,`battleroar`,WESTRING_UNITORDERNOTARG_REXXARBATTLEROAR
 UnitOrderColdArrows=0,unitordernotarg,`coldarrows`,WESTRING_UNITORDERNOTARG_COLDARROWS
 UnitOrderUnColdArrows=0,unitordernotarg,`uncoldarrows`,WESTRING_UNITORDERNOTARG_UNCOLDARROWS
-
-// Human
-UnitOrderRepairEx=0,unitorderEx,`repair`,WESTRING_unitorderEx_REPAIR
-UnitOrderInnerFireEx=0,unitorderEx,`innerfire`,WESTRING_unitorderEx_INNERFIRE
-UnitOrderDispelEx=0,unitorderEx,`dispel`,WESTRING_unitorderEx_DISPEL
-UnitOrderHealEx=0,unitorderEx,`heal`,WESTRING_unitorderEx_HEAL
-UnitOrderSlowEx=0,unitorderEx,`slow`,WESTRING_unitorderEx_SLOW
-UnitOrderInvisibilityEx=0,unitorderEx,`invisibility`,WESTRING_unitorderEx_INVISIBILITY
-UnitOrderPolymorphEx=0,unitorderEx,`polymorph`,WESTRING_unitorderEx_POLYMORPH
-UnitOrderControlMagicEx=1,unitorderEx,`controlmagic`,WESTRING_unitorderEx_CONTROLMAGIC
-UnitOrderSpellStealEx=1,unitorderEx,`spellsteal`,WESTRING_unitorderEx_SPELLSTEAL
-UnitOrderAerialShacklesEx=1,unitorderEx,`magicleash`,WESTRING_unitorderEx_AERIALSHACKLES
-UnitOrderMassTeleportEx=0,unitorderEx,`massteleport`,WESTRING_unitorderEx_MASSTELEPORT
-UnitOrderBanishEx=1,unitorderEx,`banish`,WESTRING_unitorderEx_BANISH
-UnitOrderSiphonManaEx=1,unitorderEx,`drain`,WESTRING_unitorderEx_SIPHONMANA
-UnitOrderThunderBoltEx=0,unitorderEx,`thunderbolt`,WESTRING_unitorderEx_THUNDERBOLT
-UnitOrderHolyBoltEx=0,unitorderEx,`holybolt`,WESTRING_unitorderEx_HOLYBOLT
-// Orc
-UnitOrderRepairOEx=0,unitorderEx,`repair`,WESTRING_unitorderEx_REPAIRO
-UnitOrderEnsnareEx=0,unitorderEx,`ensnare`,WESTRING_unitorderEx_ENSNARE
-UnitOrderUnstableConcoctionEx=1,unitorderEx,`unstableconcoction`,WESTRING_unitorderEx_UNSTABLECONCOCTION
-UnitOrderPurgeEx=0,unitorderEx,`purge`,WESTRING_unitorderEx_PURGE
-UnitOrderLightningShieldEx=0,unitorderEx,`lightningshield`,WESTRING_unitorderEx_LIGHTNINGSHIELD
-UnitOrderBloodlustEx=0,unitorderEx,`bloodlust`,WESTRING_unitorderEx_BLOODLUST
-UnitOrderSpiritLinkEx=1,unitorderEx,`spiritlink`,WESTRING_unitorderEx_SPIRITLINK
-UnitOrderDevourEx=0,unitorderEx,`devour`,WESTRING_unitorderEx_DEVOUR
-UnitOrderChainLightningEx=0,unitorderEx,`chainlightning`,WESTRING_unitorderEx_CHAINLIGHTNING
-UnitOrderHealingWaveEx=1,unitorderEx,`healingwave`,WESTRING_unitorderEx_HEALINGWAVE
-UnitOrderHexEx=1,unitorderEx,`hex`,WESTRING_unitorderEx_HEX
-UnitOrderAncestralSpiritTargEx=1,unitorderEx,`ancestralspirittarg`,WESTRING_unitorderEx_ANCESTRALSPIRIT
-// Night Elf
-UnitOrderRenewEx=0,unitorderEx,`renew`,WESTRING_unitorderEx_RENEW
-UnitOrderEntangleEx=0,unitorderEx,`entangle`,WESTRING_unitorderEx_ENTANGLE
-UnitOrderEntangleInstantEx=0,unitorderEx,`entangleinstant`,WESTRING_unitorderEx_ENTANGLEINSTANT
-UnitOrderReplenishEx=0,unitorderEx,`recharge`,WESTRING_unitorderEx_REPLENISH
-UnitOrderMountHippogryphEx=0,unitorderEx,`mounthippogryph`,WESTRING_unitorderEx_MOUNTHIPPOGRYPH
-UnitOrderLoadArcherEx=0,unitorderEx,`loadarcher`,WESTRING_unitorderEx_LOADARCHER
-UnitOrderAutoDispelEx=0,unitorderEx,`autodispel`,WESTRING_unitorderEx_AUTODISPEL
-UnitOrderFaerieFireEx=0,unitorderEx,`faeriefire`,WESTRING_unitorderEx_FAERIEFIRE
-UnitOrderCycloneEx=0,unitorderEx,`cyclone`,WESTRING_unitorderEx_CYCLONE
-UnitOrderRejuvinationEx=0,unitorderEx,`rejuvination`,WESTRING_unitorderEx_REJUVINATION
-UnitOrderVengeanceEx=1,unitorderEx,`vengeance`,WESTRING_unitorderEx_VENGEANCE
-UnitOrderManaBurnEx=0,unitorderEx,`manaburn`,WESTRING_unitorderEx_MANABURN
-UnitOrderEntanglingRootsEx=0,unitorderEx,`entanglingroots`,WESTRING_unitorderEx_ENTANGLINGROOTS
-UnitOrderShadowStrikeEx=1,unitorderEx,`shadowstrike`,WESTRING_unitorderEx_SHADOWSTRIKE
-// Undead
-UnitOrderRestorationEx=0,unitorderEx,`restoration`,WESTRING_unitorderEx_RESTORE
-UnitOrderSacrificeAcolyteEx=0,unitorderEx,`sacrifice`,WESTRING_unitorderEx_SACRIFICEACOLYTE
-UnitOrderSacrificeEx=0,unitorderEx,`requestsacrifice`,WESTRING_unitorderEx_SACRIFICE
-UnitOrderUnsummonEx=0,unitorderEx,`unsummon`,WESTRING_unitorderEx_UNSUMMON
-UnitOrderWebEx=0,unitorderEx,`web`,WESTRING_unitorderEx_WEB
-UnitOrderRaiseDeadEx=0,unitorderEx,`raisedead`,WESTRING_unitorderEx_RAISEDEAD
-UnitOrderUnholyFrenzyEx=0,unitorderEx,`unholyfrenzy`,WESTRING_unitorderEx_UNHOLYFRENZY
-UnitOrderCrippleEx=0,unitorderEx,`cripple`,WESTRING_unitorderEx_CRIPPLE
-UnitOrderCurseEx=0,unitorderEx,`curse`,WESTRING_unitorderEx_CURSE
-UnitOrderAntiMagicShellEx=0,unitorderEx,`antimagicshell`,WESTRING_unitorderEx_ANTIMAGICSHELL
-UnitOrderPossessionEx=0,unitorderEx,`possession`,WESTRING_unitorderEx_POSSESSION
-UnitOrderAbsorbManaEx=1,unitorderEx,`absorb`,WESTRING_unitorderEx_ABSORBMANA
-UnitOrderFlamingAttackEx=1,unitorderEx,`flamingattacktarg`,WESTRING_unitorderEx_FLAMINGATTACK
-UnitOrderImpaleEx=1,unitorderEx,`impale`,WESTRING_unitorderEx_IMPALE
-UnitOrderCarrionScarabsEx=1,unitorderEx,`carrionscarabs`,WESTRING_unitorderEx_CARRIONSCARABS
-UnitOrderDeathCoilEx=0,unitorderEx,`deathcoil`,WESTRING_unitorderEx_DEATHCOIL
-UnitOrderDeathPactEx=0,unitorderEx,`deathpact`,WESTRING_unitorderEx_DEATHPACT
-UnitOrderSleepEx=0,unitorderEx,`sleep`,WESTRING_unitorderEx_SLEEP
-UnitOrderFrostNovaEx=0,unitorderEx,`frostnova`,WESTRING_unitorderEx_FROSTNOVA
-UnitOrderFrostArmorEx=0,unitorderEx,`frostarmor`,WESTRING_unitorderEx_FROSTARMOR
-UnitOrderDarkRitualEx=0,unitorderEx,`darkritual`,WESTRING_unitorderEx_DARKRITUAL
-// Neutral
-UnitOrderCreepDevourEx=1,unitorderEx,`creepdevour`,WESTRING_unitorderEx_CREEPDEVOUR
-UnitOrderFireboltEx=0,unitorderEx,`firebolt`,WESTRING_unitorderEx_FIREBOLT
-UnitOrderCreepHealEx=0,unitorderEx,`creepheal`,WESTRING_unitorderEx_CREEPHEAL
-UnitOrderCreepThunderBoltEx=0,unitorderEx,`creepthunderbolt`,WESTRING_unitorderEx_CREEPTHUNDERBOLT
-UnitOrderParasiteEx=1,unitorderEx,`parasite`,WESTRING_unitorderEx_PARASITE
-UnitOrderSelfDestructUnitEx=1,unitorderEx,`selfdestruct`,WESTRING_unitorderEx_SELFDESTRUCT
-UnitOrderBlackArrowEx=1,unitorderEx,`blackarrow`,WESTRING_unitorderEx_BLACKARROW
-UnitOrderCharmEx=1,unitorderEx,`charm`,WESTRING_unitorderEx_CHARM
-UnitOrderLifeDrainEx=1,unitorderEx,`drain`,WESTRING_unitorderEx_LIFEDRAIN
-UnitOrderColdArrowEx=1,unitorderEx,`coldarrowstarg`,WESTRING_unitorderEx_COLDARROW
-UnitOrderForkedLightningEx=1,unitorderEx,`forkedlightning`,WESTRING_unitorderEx_FORKEDLIGHTNING
-UnitOrderStrongDrinkEx=1,unitorderEx,`drunkenhaze`,WESTRING_unitorderEx_STRONGDRINK
-UnitOrderDoomEx=1,unitorderEx,`doom`,WESTRING_unitorderEx_DOOM
-UnitOrderAcidBombEx=1,unitorderEx,`acidbomb`,WESTRING_unitorderEx_ACIDBOMB
-UnitOrderTransmuteEx=1,unitorderEx,`transmute`,WESTRING_unitorderEx_TRANSMUTE
-UnitOrderSoulBurnEx=1,unitorderEx,`soulburn`,WESTRING_unitorderEx_SOULBURN
-UnitOrderPoisonArrowEx=0,unitorderEx,`poisonarrowstarg`,WESTRING_unitorderEx_POISONARROW
-UnitOrderIncinerateArrowEx=1,unitorderEx,`incineratearrow`,WESTRING_unitorderEx_INCINERATEARROW
-// Special
-UnitOrderFingerOfDeathEx=0,unitorderEx,`fingerofdeath`,WESTRING_unitorderEx_FINGEROFDEATH
-UnitOrderDarkConversionEx=0,unitorderEx,`darkconversion`,WESTRING_unitorderEx_DARKCONVERSION
-UnitOrderSoulPreservationEx=0,unitorderEx,`soulpreservation`,WESTRING_unitorderEx_SOULPRESERVATION
-UnitOrderDarkConversionFastEx=0,unitorderEx,`darkconversion`,WESTRING_unitorderEx_DARKCONVERSIONFAST
-
-// Human
-UnitOrderFlareEx=0,unitorderEx,`flare`,WESTRING_unitorderEx_FLARE
-UnitOrderCloudOfFogEx=1,unitorderEx,`cloudoffog`,WESTRING_unitorderEx_CLOUDOFFOG
-UnitOrderBlizzardEx=0,unitorderEx,`blizzard`,WESTRING_unitorderEx_BLIZZARD
-UnitOrderFlameStrikeEx=1,unitorderEx,`flamestrike`,WESTRING_unitorderEx_FLAMESTRIKE
-// Orc
-UnitOrderSentryWardEx=0,unitorderEx,`evileye`,WESTRING_unitorderEx_SENTRYWARD
-UnitOrderStasisTrapEx=0,unitorderEx,`stasistrap`,WESTRING_unitorderEx_STASISTRAP
-UnitOrderHealingWardEx=0,unitorderEx,`healingward`,WESTRING_unitorderEx_HEALINGWARD
-UnitOrderDisenchantEx=1,unitorderEx,`disenchant`,WESTRING_unitorderEx_DISENCHANT
-UnitOrderFarSightEx=0,unitorderEx,`farsight`,WESTRING_unitorderEx_FARSIGHT
-UnitOrderEarthquakeEx=0,unitorderEx,`earthquake`,WESTRING_unitorderEx_EARTHQUAKE
-UnitOrderSerpentWardEx=1,unitorderEx,`ward`,WESTRING_unitorderEx_SERPENTWARD
-UnitOrderShockwaveEx=0,unitorderEx,`shockwave`,WESTRING_unitorderEx_SHOCKWAVE
-// Night Elf
-UnitOrderRootEx=0,unitorderEx,`root`,WESTRING_unitorderEx_ROOT
-UnitOrderDetonateEx=0,unitorderEx,`detonate`,WESTRING_unitorderEx_DETONATE
-UnitOrderForceOfNatureEx=0,unitorderEx,`forceofnature`,WESTRING_unitorderEx_FORCEOFNATURE
-UnitOrderStarfallEx=0,unitorderEx,`obsolete`,WESTRING_unitorderEx_STARFALL
-UnitOrderBlinkEx=1,unitorderEx,`blink`,WESTRING_unitorderEx_BLINK
-// Undead
-UnitOrderDevourMagicEx=1,unitorderEx,`devourmagic`,WESTRING_unitorderEx_DEVOURMAGIC
-UnitOrderImpalePointEx=1,unitorderEx,`impale`,WESTRING_unitorderEx_IMPALE
-UnitOrderCarrionSwarmEx=0,unitorderEx,`carrionswarm`,WESTRING_unitorderEx_CARRIONSWARM
-UnitOrderDarkSummoningEx=0,unitorderEx,`dreadlordinferno`,WESTRING_unitorderEx_DARKSUMMONING
-UnitOrderDeathAndDecayEx=0,unitorderEx,`deathanddecay`,WESTRING_unitorderEx_DEATHANDDECAY
-// Neutral
-UnitOrderBreathOfFrostEx=1,unitorderEx,`breathoffrost`,WESTRING_unitorderEx_BREATHOFFROST
-UnitOrderMonsoonEx=1,unitorderEx,`monsoon`,WESTRING_unitorderEx_MONSOON
-UnitOrderSelfDestructEx=0,unitorderEx,`selfdestruct`,WESTRING_unitorderEx_SELFDESTRUCT
-UnitOrderStampedeEx=1,unitorderEx,`stampede`,WESTRING_unitorderEx_STAMPEDE
-UnitOrderSilenceEx=1,unitorderEx,`silence`,WESTRING_unitorderEx_SILENCE
-UnitOrderTornadoEx=1,unitorderEx,`tornado`,WESTRING_unitorderEx_TORNADO
-UnitOrderBreathOfFireEx=1,unitorderEx,`breathoffire`,WESTRING_unitorderEx_BREATHOFFIRE
-UnitOrderHeroRainOfFireEx=1,unitorderEx,`rainoffire`,WESTRING_unitorderEx_HERORAINOFFIRE
-UnitOrderHealingSprayEx=1,unitorderEx,`healingspray`,WESTRING_unitorderEx_HEALINGSPRAY
-UnitOrderClusterRocketsEx=1,unitorderEx,`clusterrockets`,WESTRING_unitorderEx_CLUSTERROCKETS
-UnitOrderSummonFactoryEx=1,unitorderEx,`summonfactory`,WESTRING_unitorderEx_SUMMONFACTORY
-UnitOrderVolcanoEx=1,unitorderEx,`volcano`,WESTRING_unitorderEx_VOLCANO
-// Special
-UnitOrderDarkPortalEx=0,unitorderEx,`darkportal`,WESTRING_unitorderEx_DARKPORTAL
-UnitOrderRainOfChaosEx=0,unitorderEx,`rainoffire`,WESTRING_unitorderEx_RAINOFCHAOS
-UnitOrderRainOfFireEx=0,unitorderEx,`rainoffire`,WESTRING_unitorderEx_RAINOFFIRE
-UnitOrderInfernoEx=0,unitorderEx,`inferno`,WESTRING_unitorderEx_INFERNO
-UnitOrderDarkSummoningOldEx=0,unitorderEx,`darksummoning`,WESTRING_unitorderEx_DARKSUMMONINGOLD
-
-// Human
-// Orc
-// Night Elf
-UnitOrderConsumeTreeEx=0,unitorderEx,`eattree`,WESTRING_UNITORDERDTARG_CONSUMETREE
-UnitOrderSentinelEx=0,unitorderEx,`sentinel`,WESTRING_UNITORDERDTARG_SENTINEL
-UnitOrderGrabTreeEx=1,unitorderEx,`grabtree`,WESTRING_UNITORDERDTARG_GRABTREE
-// Undead
-// Neutral
-// Special
-
-// Human
-UnitOrderTownBellOnEx=0,unitorderEx,`townbellon`,WESTRING_unitorderEx_TOWNBELLON
-UnitOrderTownBellOffEx=0,unitorderEx,`townbelloff`,WESTRING_unitorderEx_TOWNBELLOFF
-UnitOrderMilitiaEx=0,unitorderEx,`militia`,WESTRING_unitorderEx_MILITIA
-UnitOrderMilitiaOffEx=0,unitorderEx,`militiaoff`,WESTRING_unitorderEx_MILITIAOFF
-UnitOrderRepairOnEx=0,unitorderEx,`repairon`,WESTRING_unitorderEx_REPAIRON
-UnitOrderRepairOffEx=0,unitorderEx,`repairoff`,WESTRING_unitorderEx_REPAIROFF
-UnitOrderDefendEx=0,unitorderEx,`defend`,WESTRING_unitorderEx_DEFEND
-UnitOrderUnDefendEx=0,unitorderEx,`undefend`,WESTRING_unitorderEx_UNDEFEND
-UnitOrderHealOnEx=0,unitorderEx,`healon`,WESTRING_unitorderEx_HEALON
-UnitOrderHealOffEx=0,unitorderEx,`healoff`,WESTRING_unitorderEx_HEALOFF
-UnitOrderInnerFireOnEx=0,unitorderEx,`innerfireon`,WESTRING_unitorderEx_INNERFIREON
-UnitOrderInnerFireOffEx=0,unitorderEx,`innerfireoff`,WESTRING_unitorderEx_INNERFIREOFF
-UnitOrderSlowOnEx=0,unitorderEx,`slowon`,WESTRING_unitorderEx_SLOWON
-UnitOrderSlowOffEx=0,unitorderEx,`slowoff`,WESTRING_unitorderEx_SLOWOFF
-UnitOrderSpellStealOnEx=1,unitorderEx,`spellstealon`,WESTRING_unitorderEx_SPELLSTEALON
-UnitOrderSpellStealOffEx=1,unitorderEx,`spellstealoff`,WESTRING_unitorderEx_SPELLSTEALOFF
-UnitOrderWaterElementalEx=0,unitorderEx,`waterelemental`,WESTRING_unitorderEx_WATERELEMENTAL
-UnitOrderPhoenixEx=1,unitorderEx,`phoenix`,WESTRING_unitorderEx_PHOENIX
-UnitOrderThunderClapEx=0,unitorderEx,`thunderclap`,WESTRING_unitorderEx_THUNDERCLAP
-UnitOrderAvatarEx=0,unitorderEx,`avatar`,WESTRING_unitorderEx_AVATAR
-UnitOrderDivineShieldEx=0,unitorderEx,`divineshield`,WESTRING_unitorderEx_DIVINESHIELD
-UnitOrderUnDivineShieldEx=0,unitorderEx,`undivineshield`,WESTRING_unitorderEx_UNDIVINESHIELD
-UnitOrderResurrectionEx=0,unitorderEx,`resurrection`,WESTRING_unitorderEx_RESURRECTION
-// Orc
-UnitOrderBattleStationsEx=0,unitorderEx,`battlestations`,WESTRING_unitorderEx_BATTLESTATIONS
-UnitOrderStandDownEx=0,unitorderEx,`standdown`,WESTRING_unitorderEx_STANDDOWN
-UnitOrderRepairOOnEx=0,unitorderEx,`repairon`,WESTRING_unitorderEx_REPAIROON
-UnitOrderRepairOOffEx=0,unitorderEx,`repairoff`,WESTRING_unitorderEx_REPAIROOFF
-UnitOrderBerserkEx=1,unitorderEx,`berserk`,WESTRING_unitorderEx_BERSERK
-UnitOrderBloodlustOnEx=0,unitorderEx,`bloodluston`,WESTRING_unitorderEx_BLOODLUSTON
-UnitOrderBloodlustOffEx=0,unitorderEx,`bloodlustoff`,WESTRING_unitorderEx_BLOODLUSTOFF
-UnitOrderAncestralSpiritEx=1,unitorderEx,`ancestralspirit`,WESTRING_unitorderEx_ANCESTRALSPIRIT
-UnitOrderEtherealFormEx=1,unitorderEx,`uncorporealform`,WESTRING_unitorderEx_ETHEREALFORM
-UnitOrderCorporealFormEx=1,unitorderEx,`corporealform`,WESTRING_unitorderEx_CORPOREALFORM
-UnitOrderWindWalkEx=0,unitorderEx,`windwalk`,WESTRING_unitorderEx_WINDWALK
-UnitOrderMirrorImageEx=0,unitorderEx,`mirrorimage`,WESTRING_unitorderEx_MIRRORIMAGE
-UnitOrderWhirlWindEx=0,unitorderEx,`whirlwind`,WESTRING_unitorderEx_BLADESTORM
-UnitOrderSpiritWolfEx=0,unitorderEx,`spiritwolf`,WESTRING_unitorderEx_FERALSPIRIT
-UnitOrderVoodooEx=1,unitorderEx,`voodoo`,WESTRING_unitorderEx_VOODOO
-UnitOrderStompEx=0,unitorderEx,`stomp`,WESTRING_unitorderEx_WARSTOMP
-// Night Elf
-UnitOrderUnRootEx=0,unitorderEx,`unroot`,WESTRING_unitorderEx_UNROOT
-UnitOrderAutoEntangleEx=1,unitorderEx,`autoentangle`,WESTRING_unitorderEx_AUTOENTANGLE
-UnitOrderAutoEntangleInstantEx=1,unitorderEx,`autoentangleinstant`,WESTRING_unitorderEx_AUTOENTANGLEINSTANT
-UnitOrderReplenishOnEx=1,unitorderEx,`rechargeon`,WESTRING_unitorderEx_REPLENISHON
-UnitOrderReplenishOffEx=1,unitorderEx,`rechargeoff`,WESTRING_unitorderEx_REPLENISHOFF
-UnitOrderAmbushEx=0,unitorderEx,`ambush`,WESTRING_unitorderEx_HIDE
-UnitOrderRenewOnEx=0,unitorderEx,`renewon`,WESTRING_unitorderEx_RENEWON
-UnitOrderRenewOffEx=0,unitorderEx,`renewoff`,WESTRING_unitorderEx_RENEWOFF
-UnitOrderCoupleInstant1Ex=1,unitorderEx,`coupleinstant`,WESTRING_unitorderEx_COUPLEINSTANT1
-UnitOrderCoupleInstant2Ex=1,unitorderEx,`coupleinstant`,WESTRING_unitorderEx_COUPLEINSTANT2
-UnitOrderDecoupleEx=1,unitorderEx,`decouple`,WESTRING_unitorderEx_DECOUPLE
-UnitOrderAutoDispelOnEx=0,unitorderEx,`autodispelon`,WESTRING_unitorderEx_AUTODISPELON
-UnitOrderAutoDispelOffEx=0,unitorderEx,`autodispeloff`,WESTRING_unitorderEx_AUTODISPELOFF
-UnitOrderFaerieFireOnEx=0,unitorderEx,`faeriefireon`,WESTRING_unitorderEx_FAERIEFIREON
-UnitOrderFaerieFireOffEx=0,unitorderEx,`faeriefireoff`,WESTRING_unitorderEx_FAERIEFIREOFF
-UnitOrderRavenFormEx=0,unitorderEx,`ravenform`,WESTRING_unitorderEx_RAVENFORM
-UnitOrderUnRavenFormEx=0,unitorderEx,`unravenform`,WESTRING_unitorderEx_UNRAVENFORM
-UnitOrderRoarEx=0,unitorderEx,`roar`,WESTRING_unitorderEx_ROAR
-UnitOrderBearFormEx=0,unitorderEx,`bearform`,WESTRING_unitorderEx_BEARFORM
-UnitOrderUnBearFormEx=0,unitorderEx,`unbearform`,WESTRING_unitorderEx_UNBEARFORM
-UnitOrderTauntEx=1,unitorderEx,`taunt`,WESTRING_unitorderEx_TAUNT
-UnitOrderManaFlareOnEx=1,unitorderEx,`manaflareon`,WESTRING_unitorderEx_MANAFLAREON
-UnitOrderManaFlareOffEx=1,unitorderEx,`manaflareoff`,WESTRING_unitorderEx_MANAFLAREOFF
-UnitOrderPhaseShiftEx=1,unitorderEx,`phaseshift`,WESTRING_unitorderEx_PHASESHIFT
-UnitOrderPhaseShiftOnEx=1,unitorderEx,`phaseshifton`,WESTRING_unitorderEx_PHASESHIFTON
-UnitOrderPhaseShiftOffEx=1,unitorderEx,`phaseshiftoff`,WESTRING_unitorderEx_PHASESHIFTOFF
-UnitOrderVengeanceInstantEx=1,unitorderEx,`vengeanceinstant`,WESTRING_unitorderEx_VENGEANCEINSTANT
-UnitOrderVengeanceOnEx=1,unitorderEx,`vengeanceon`,WESTRING_unitorderEx_VENGEANCEON
-UnitOrderVengeanceOffEx=1,unitorderEx,`vengeanceoff`,WESTRING_unitorderEx_VENGEANCEOFF
-UnitOrderImmolationEx=0,unitorderEx,`immolation`,WESTRING_unitorderEx_IMMOLATION
-UnitOrderUnImmolationEx=0,unitorderEx,`unimmolation`,WESTRING_unitorderEx_UNIMMOLATION
-UnitOrderMetamorphosisEx=0,unitorderEx,`metamorphosis`,WESTRING_unitorderEx_METAMORPHOSIS
-UnitOrderTranquilityEx=0,unitorderEx,`tranquility`,WESTRING_unitorderEx_TRANQUILITY
-UnitOrderSearingArrowsEx=0,unitorderEx,`flamingarrows`,WESTRING_unitorderEx_SEARINGARROWS
-UnitOrderUnSearingArrowsEx=0,unitorderEx,`unflamingarrows`,WESTRING_unitorderEx_UNSEARINGARROWS
-UnitOrderScoutEx=0,unitorderEx,`scout`,WESTRING_unitorderEx_SCOUT
-UnitOrderStarfall2Ex=0,unitorderEx,`starfall`,WESTRING_unitorderEx_STARFALL
-UnitOrderFanOfKnivesEx=1,unitorderEx,`fanofknives`,WESTRING_unitorderEx_FANOFKNIVES
-UnitOrderSpiritOfVengeanceEx=1,unitorderEx,`spiritofvengeance`,WESTRING_unitorderEx_SPIRITOFVENGEANCE
-// Undead
-UnitOrderRestorationOnEx=0,unitorderEx,`restorationon`,WESTRING_unitorderEx_RESTOREON
-UnitOrderRestorationOffEx=0,unitorderEx,`restorationoff`,WESTRING_unitorderEx_RESTOREOFF
-UnitOrderCannibalizeEx=0,unitorderEx,`cannibalize`,WESTRING_unitorderEx_CANNIBALIZE
-UnitOrderWebOnEx=0,unitorderEx,`webon`,WESTRING_unitorderEx_WEBON
-UnitOrderWebOffEx=0,unitorderEx,`weboff`,WESTRING_unitorderEx_WEBOFF
-UnitOrderBurrowEx=1,unitorderEx,`burrow`,WESTRING_unitorderEx_BURROW
-UnitOrderUnBurrowEx=1,unitorderEx,`unburrow`,WESTRING_unitorderEx_UNBURROW
-UnitOrderLoadCorpseEx=0,unitorderEx,`loadcorpse`,WESTRING_unitorderEx_LOADCORPSE
-UnitOrderUnloadAllCorpsesEx=0,unitorderEx,`unloadallcorpses`,WESTRING_unitorderEx_UNLOADALLCORPSES
-UnitOrderStoneFormEx=0,unitorderEx,`stoneform`,WESTRING_unitorderEx_STONEFORM
-UnitOrderUnStoneFormEx=0,unitorderEx,`unstoneform`,WESTRING_unitorderEx_UNSTONEFORM
-UnitOrderRaiseDeadInstantEx=1,unitorderEx,`instant`,WESTRING_unitorderEx_RAISEDEAD
-UnitOrderRaiseDeadOnEx=0,unitorderEx,`raisedeadon`,WESTRING_unitorderEx_RAISEDEADON
-UnitOrderRaiseDeadOffEx=0,unitorderEx,`raisedeadoff`,WESTRING_unitorderEx_RAISEDEADOFF
-UnitOrderCurseOnEx=0,unitorderEx,`curseon`,WESTRING_unitorderEx_CURSEON
-UnitOrderCurseOffEx=0,unitorderEx,`curseoff`,WESTRING_unitorderEx_CURSEOFF
-UnitOrderFlamingAttackOnEx=1,unitorderEx,`flamingattack`,WESTRING_unitorderEx_FLAMINGATTACKON
-UnitOrderFlamingAttackOffEx=1,unitorderEx,`unflamingattack`,WESTRING_unitorderEx_FLAMINGATTACKOFF
-UnitOrderSphinxFormEx=1,unitorderEx,`avengerform`,WESTRING_unitorderEx_SPHINXFORM
-UnitOrderReplenishLifeEx=1,unitorderEx,`replenishlife`,WESTRING_unitorderEx_REPLENISHLIFE
-UnitOrderReplenishLifeOnEx=1,unitorderEx,`replenishlifeon`,WESTRING_unitorderEx_REPLENISHLIFEON
-UnitOrderReplenishLifeOffEx=1,unitorderEx,`replenishlifeoff`,WESTRING_unitorderEx_REPLENISHLIFEOFF
-UnitOrderReplenishManaEx=1,unitorderEx,`replenishmana`,WESTRING_unitorderEx_REPLENISHMANA
-UnitOrderReplenishManaOnEx=1,unitorderEx,`replenishmanaon`,WESTRING_unitorderEx_REPLENISHMANAON
-UnitOrderReplenishManaOffEx=1,unitorderEx,`replenishmanaoff`,WESTRING_unitorderEx_REPLENISHMANAOFF
-UnitOrderCarrionScarabsOnEx=1,unitorderEx,`carrionscarabson`,WESTRING_unitorderEx_CARRIONSCARABSON
-UnitOrderCarrionScarabsOffEx=1,unitorderEx,`carrionscarabsoff`,WESTRING_unitorderEx_CARRIONSCARABSOFF
-UnitOrderCarrionScarabsInstantEx=1,unitorderEx,`carrionscarabsinstant`,WESTRING_unitorderEx_CARRIONSCARABS
-UnitOrderLocustSwarmEx=1,unitorderEx,`locustswarm`,WESTRING_unitorderEx_LOCUSTSWARM
-UnitOrderAnimateDeadEx=0,unitorderEx,`animatedead`,WESTRING_unitorderEx_ANIMATEDEAD
-UnitOrderFrostArmorOnEx=0,unitorderEx,`frostarmoron`,WESTRING_unitorderEx_FROSTARMORON
-UnitOrderFrostArmorOffEx=0,unitorderEx,`frostarmoroff`,WESTRING_unitorderEx_FROSTARMOROFF
-// Neutral
-UnitOrderCreepAnimateDeadEx=0,unitorderEx,`creepanimatedead`,WESTRING_unitorderEx_CREEPANIMATEDEAD
-UnitOrderCreepHealOnEx=0,unitorderEx,`creephealon`,WESTRING_unitorderEx_CREEPHEALON
-UnitOrderCreepHealOffEx=0,unitorderEx,`creephealoff`,WESTRING_unitorderEx_CREEPHEALOFF
-UnitOrderRevengeEx=0,unitorderEx,`revenge`,WESTRING_unitorderEx_REVENGE
-UnitOrderCreepThunderClapEx=0,unitorderEx,`creepthunderclap`,WESTRING_unitorderEx_CREEPTHUNDERCLAP
-UnitOrderWateryMinionEx=1,unitorderEx,`wateryminion`,WESTRING_unitorderEx_WATERYMINION
-UnitOrderSelfDestructOnEx=1,unitorderEx,`selfdestructon`,WESTRING_unitorderEx_SELFDESTRUCTON
-UnitOrderSelfDestructOffEx=1,unitorderEx,`selfdestructoff`,WESTRING_unitorderEx_SELFDESTRUCTOFF
-UnitOrderSummonGrizzlyEx=1,unitorderEx,`summongrizzly`,WESTRING_unitorderEx_SUMMONGRIZZLY
-UnitOrderSummonQuillbeastEx=1,unitorderEx,`summonquillbeast`,WESTRING_unitorderEx_SUMMONQUILLBEAST
-UnitOrderSummonWarEagleEx=1,unitorderEx,`summonwareagle`,WESTRING_unitorderEx_SUMMONWAREAGLE
-UnitOrderBlackArrowOnEx=1,unitorderEx,`blackarrowon`,WESTRING_unitorderEx_BLACKARROWON
-UnitOrderBlackArrowOffEx=1,unitorderEx,`blackarrowoff`,WESTRING_unitorderEx_BLACKARROWOFF
-UnitOrderColdArrowOnEx=1,unitorderEx,`coldarrows`,WESTRING_unitorderEx_COLDARROWON
-UnitOrderColdArrowOffEx=1,unitorderEx,`uncoldarrows`,WESTRING_unitorderEx_COLDARROWOFF
-UnitOrderManaShieldOnEx=1,unitorderEx,`manashieldon`,WESTRING_unitorderEx_MANASHIELDON
-UnitOrderManaShieldOffEx=1,unitorderEx,`manashieldoff`,WESTRING_unitorderEx_MANASHIELDOFF
-UnitOrderElementalFuryEx=1,unitorderEx,`elementalfury`,WESTRING_unitorderEx_ELEMENTALFURY
-UnitOrderHowlOfTerrorEx=1,unitorderEx,`howlofterror`,WESTRING_unitorderEx_HOWLOFTERROR
-UnitOrderPoisonArrowsEx=0,unitorderEx,`poisonarrows`,WESTRING_unitorderEx_POISONARROWON
-UnitOrderUnPoisonArrowsEx=0,unitorderEx,`unpoisonarrows`,WESTRING_unitorderEx_POISONARROWOFF
-UnitOrderChemicalRageEx=1,unitorderEx,`chemicalrage`,WESTRING_unitorderEx_CHEMICALRAGE
-UnitOrderRoboGoblinEx=1,unitorderEx,`robogoblin`,WESTRING_unitorderEx_ROBOGOBLIN
-UnitOrderUnRoboGoblinEx=1,unitorderEx,`unrobogoblin`,WESTRING_unitorderEx_UNROBOGOBLIN
-UnitOrderLavaMonsterEx=1,unitorderEx,`lavamonster`,WESTRING_unitorderEx_LAVAMONSTER
-UnitOrderIncinerateArrowOnEx=1,unitorderEx,`incineratearrowon`,WESTRING_unitorderEx_INCINERATEARROWON
-UnitOrderIncinerateArrowOffEx=1,unitorderEx,`incineratearrowoff`,WESTRING_unitorderEx_INCINERATEARROWOFF
-// Special
-UnitOrderChannelEx=1,unitorderEx,`channel`,WESTRING_unitorderEx_CHANNEL
-UnitOrderMedivhRavenFormEx=0,unitorderEx,`ravenform`,WESTRING_unitorderEx_MEDIVHRAVENFORM
-UnitOrderMedivhUnRavenFormEx=0,unitorderEx,`unravenform`,WESTRING_unitorderEx_MEDIVHUNRAVENFORM
-UnitOrderRexxarBattleRoarEx=1,unitorderEx,`battleroar`,WESTRING_unitorderEx_REXXARBATTLEROAR
-UnitOrderColdArrowsEx=0,unitorderEx,`coldarrows`,WESTRING_unitorderEx_COLDARROWS
-UnitOrderUnColdArrowsEx=0,unitorderEx,`uncoldarrows`,WESTRING_unitorderEx_UNCOLDARROWS
 
 // Hero Skills
 // Human Archmage
@@ -3634,22 +3318,6 @@ _MapInitializationEvent_Defaults=
 _MapInitializationEvent_Category=TC_NOTHING
 
 
-TriggerRegisterCommandEvent=1,abilcode,unitorderEx
-_TriggerRegisterCommandEvent_Defaults=_
-_TriggerRegisterCommandEvent_Category=TC_PLAYER
-
-TriggerRegisterBuildCommandEventBJ=1,unitcode
-_TriggerRegisterBuildCommandEventBJ_Defaults=_
-_TriggerRegisterBuildCommandEventBJ_Category=TC_PLAYER
-
-TriggerRegisterTrainCommandEventBJ=1,unitcode
-_TriggerRegisterTrainCommandEventBJ_Defaults=_
-_TriggerRegisterTrainCommandEventBJ_Category=TC_PLAYER
-
-TriggerRegisterUpgradeCommandEventBJ=1,techcode
-_TriggerRegisterUpgradeCommandEventBJ_Defaults=_
-_TriggerRegisterUpgradeCommandEventBJ_Category=TC_PLAYER
-
 // Destructible events
 TriggerRegisterDeathEvent=0,destructable
 _TriggerRegisterDeathEvent_Defaults=_
@@ -3768,7 +3436,7 @@ TriggerRegisterPlayerUnitEventSimple=0,player,playerunitevent
 _TriggerRegisterPlayerUnitEventSimple_Defaults=Player00,PlayerUnitEventDeath
 _TriggerRegisterPlayerUnitEventSimple_Category=TC_UNIT
 
-TriggerRegisterAnyUnitEventBJ=0,playerunitevent
+TriggerRegisterAnyUnitEventBJ=1,playerunitevent
 _TriggerRegisterAnyUnitEventBJ_Defaults=PlayerUnitEventDeath
 _TriggerRegisterAnyUnitEventBJ_Category=TC_UNIT
 
@@ -3937,11 +3605,11 @@ _GetBooleanOr_Category=TC_CONDITION
 _GetBooleanOr_UseWithAI=1
 
 // Specially handled by the editor
-AndMultiple=0,nothing
+AndMultiple=1,nothing
 _AndMultiple_Category=TC_CONDITION
 
 // Specially handled by the editor
-OrMultiple=0,nothing
+OrMultiple=1,nothing
 _OrMultiple_Category=TC_CONDITION
 
 
@@ -3960,17 +3628,9 @@ CommentString=0,scriptcode
 _CommentString_Defaults=_
 _CommentString_Category=TC_COMMENT
 
-CustomScriptCode=0,scriptcode
+CustomScriptCode=1,scriptcode
 _CustomScriptCode_Defaults=_
 _CustomScriptCode_Category=TC_CUSTOM
-
-SetDialogueTextKey=0,sound,string
-_SetDialogueTextKey_Defaults=_
-_SetDialogueTextKey_Category=TC_CINEMATIC
-
-SetDialogueSpeakerNameKey=0,sound,string
-_SetDialogueSpeakerNameKey_Defaults=_
-_SetDialogueSpeakerNameKey_Category=TC_CINEMATIC
 
 TriggerSleepAction=0,real
 _TriggerSleepAction_Defaults=2
@@ -3982,7 +3642,7 @@ _PolledWait_Defaults=2
 _PolledWait_Limits=0,_
 _PolledWait_Category=TC_WAIT
 
-WaitForCondition=0,boolexpr,real
+WaitForCondition=1,boolexpr,real
 _WaitForCondition_Defaults=_,1
 _WaitForCondition_Limits=_,_,0.1,_
 _WaitForCondition_Category=TC_WAIT
@@ -4220,16 +3880,6 @@ CameraResetSmoothingFactorBJ=0,nothing
 _CameraResetSmoothingFactorBJ_Defaults=
 _CameraResetSmoothingFactorBJ_Category=TC_CAMERA
 
-CameraSetFocalDistance=0,real
-_CameraSetFocalDistance_Defaults=100
-_CameraSetFocalDistance_Limits=0,_
-_CameraSetFocalDistance_Category=TC_CAMERA
-
-CameraSetDepthOfFieldScale=0,real
-_CameraSetDepthOfFieldScale_Defaults=40
-_CameraSetDepthOfFieldScale_Limits=0,_
-_CameraSetDepthOfFieldScale_Category=TC_CAMERA
-
 CameraSetSourceNoiseForPlayer=0,player,real,real
 _CameraSetSourceNoiseForPlayer_Defaults=Player00,10,0.1
 _CameraSetSourceNoiseForPlayer_Category=TC_CAMERA
@@ -4259,33 +3909,8 @@ SetCameraQuickPositionLocForPlayer=0,player,location
 _SetCameraQuickPositionLocForPlayer_Defaults=Player00,GetRectCenter
 _SetCameraQuickPositionLocForPlayer_Category=TC_CAMERA
 
-BlzCameraSetupSetLabel=0,camerasetup,string
-_BlzCameraSetupSetLabel_Defaults=_,"Camera"
-_BlzCameraSetupSetLabel_Category=TC_CAMERA
-
-BlzCameraSetupGetLabel=0,camerasetup
-_BlzCameraSetupGetLabel_Defaults=_
-_BlzCameraSetupGetLabel_Category=TC_CAMERA
 
 // Cinematic actions
-PlayDialogueFromSpeaker=0,force,unit,sound,addsettooption,real,waitdontoption
-_PlayDialogueFromSpeaker_Defaults=_,_,_,AddSetToAdd,0,WaitDontWait
-_PlayDialogueFromSpeaker_Category=TC_CINEMATIC
-
-PlayDialogueFromSpeakerEx=0,force,unit,unitcode,sound,addsettooption,real,waitdontoption
-_PlayDialogueFromSpeakerEx_Defaults=_,_,_,_,AddSetToAdd,0,WaitDontWait
-_PlayDialogueFromSpeakerEx_Category=TC_CINEMATIC
-
-//function PlayDialogueFromSpeakerType takes force toForce, player fromPlayer, integer speakerType, location loc, sound soundHandle, integer timeType, real timeVal, boolean wait returns boolean
-PlayDialogueFromSpeakerType=0,force,player,unitcode,location,sound,addsettooption,real,waitdontoption
-_PlayDialogueFromSpeakerType_Defaults=_,_,_,_,_,AddSetToAdd,0,WaitDontWait
-_PlayDialogueFromSpeakerType_Category=TC_CINEMATIC
-
-//function PlayDialogueFromSpeakerTypeEx takes force toForce, player fromPlayer, integer speakerType, location loc, sound soundHandle, integer timeType, real timeVal, boolean wait returns nothing
-PlayDialogueFromSpeakerTypeEx=0,force,player,unitcode,location,sound,addsettooption,real,waitdontoption
-_PlayDialogueFromSpeakerTypeEx_Defaults=_,_,_,_,_,AddSetToAdd,0,WaitDontWait
-_PlayDialogueFromSpeakerTypeEx_Category=TC_CINEMATIC
-
 BlzEnableTargetIndicator=0,boolean
 _BlzEnableTargetIndicator_Defaults=FALSE
 _BlzEnableTargetIndicator_Category=TC_CINEMATIC
@@ -4338,38 +3963,6 @@ UnitAddIndicatorBJ=0,unit,real,real,real,real
 _UnitAddIndicatorBJ_Defaults=_,100,100,100,0
 _UnitAddIndicatorBJ_Limits=_,_,0,100,0,100,0,100,0,100
 _UnitAddIndicatorBJ_Category=TC_CINEMATIC
-
-CreateMinimapIconOnUnitBJ=1,unit,integer,integer,integer,modelfile,fogstate
-_CreateMinimapIconOnUnitBJ_Defaults=GetTriggerUnit,255,255,255,_,_
-_CreateMinimapIconOnUnitBJ_Category=TC_CINEMATIC
-
-CreateMinimapIconAtLocBJ=1,location,integer,integer,integer,modelfile,fogstate
-_CreateMinimapIconAtLocBJ_Defaults=_,255,255,255,_,_
-_CreateMinimapIconAtLocBJ_Category=TC_CINEMATIC
-
-CreateMinimapIconBJ=1,real,real,integer,integer,integer,modelfile,fogstate
-_CreateMinimapIconBJ_Defaults=_,_,255,255,255,_,_
-_CreateMinimapIconBJ_Category=TC_CINEMATIC
-
-CampaignMinimapIconUnitBJ=1,unit,campaignpingstyle
-_CampaignMinimapIconUnitBJ_Defaults=GetTriggerUnit,CampaignPingStyleBonus
-_CampaignMinimapIconUnitBJ_Category=TC_QUEST
-
-CampaignMinimapIconLocBJ=1,location,campaignpingstyle
-_CampaignMinimapIconLocBJ_Defaults=_,CampaignPingStyleBonus
-_CampaignMinimapIconLocBJ_Category=TC_QUEST
-
-DestroyMinimapIcon=0,minimapicon
-_DestroyMinimapIcon_Defaults=
-_DestroyMinimapIcon_Category=TC_QUEST
-
-SetMinimapIconVisible=1,minimapicon,boolean
-_SetMinimapIconVisible_Defaults=_true
-_SetMinimapIconVisible_Category=TC_QUEST
-
-SetMinimapIconOrphanDestroy=1,minimapicon,boolean
-_SetMinimapIconOrphanDestroy_Defaults=_true
-_SetMinimapIconOrphanDestroy_Category=TC_QUEST
 
 DestructableAddIndicatorBJ=0,destructable,real,real,real,real
 _DestructableAddIndicatorBJ_Defaults=_,100,100,100,0
@@ -4771,17 +4364,9 @@ SaveGame=1,anyfile,
 _SaveGame_Defaults="SaveFile.w3z"
 _SaveGame_Category=TC_GAME
 
-SetMaxCheckpointSaves=1,integer
-_SetMaxCheckpointSaves_Defaults=10
-_SetMaxCheckpointSaves_Category=TC_GAME
-
-SaveGameCheckpoint=1,anyfile,boolean
-_SaveGameCheckpoint_Defaults="Checkpoint.w3z"
-_SaveGameCheckpoint_Category=TC_GAME
-
-SaveGameCheckPointBJ=0,anyfile,showhideoption
-_SaveGameCheckPointBJ_Defaults="MapSaveName",ShowHideShow
-_SaveGameCheckPointBJ_Category=TC_GAME
+LoadGameBJ=1,anyfile,useskipoption
+_LoadGameBJ_Defaults="LoadFile.w3z",UseSkipOptionSkip
+_LoadGameBJ_Category=TC_GAME
 
 SaveAndLoadGameBJ=1,anyfile,anyfile,useskipoption
 _SaveAndLoadGameBJ_Defaults="SaveFile.w3z","LoadFile.w3z",UseSkipOptionSkip
@@ -4837,7 +4422,7 @@ EnableMinimapFilterButtons=1,enabledisableoption,enabledisableoption
 _EnableMinimapFilterButtons_Defaults=EnableDisableDisable,EnableDisableDisable
 _EnableMinimapFilterButtons_Category=TC_GAME
 
-EnableSelect=0,enabledisableoption,enabledisableoption
+EnableSelect=1,enabledisableoption,enabledisableoption
 _EnableSelect_Defaults=EnableDisableEnable,EnableDisableEnable
 _EnableSelect_Category=TC_GAME
 
@@ -4869,26 +4454,6 @@ Preloader=0,preloadfile
 _Preloader_Defaults=
 _Preloader_Category=TC_GAME
 
-// Recording related API
-BlzShowTerrain=0,boolean
-_BlzShowTerrain_Defaults=true
-_BlzShowTerrain_Category=TC_VISIBILITY
-
-BlzShowSkyBox=0,boolean
-_BlzShowSkyBox_Defaults=true
-_BlzShowSkyBox_Category=TC_VISIBILITY
-
-BlzStartRecording=0,integer
-_BlzStartRecording_Defaults=30
-_BlzStartRecording_Category=TC_GAME
-
-BlzEndRecording=0
-_BlzEndRecording_Category=TC_GAME
-
-// Machinima API
-BlzHideCinematicPanels=0,boolean
-_BlzHideCinematicPanels_Defaults=false
-_BlzHideCinematicPanels_Category=TC_CINEMATIC
 
 // Game Cache actions
 InitGameCacheBJ=0,stringnoformat
@@ -5670,16 +5235,6 @@ _SetPlayerHandicapBJ_Defaults=Player00,100
 _SetPlayerHandicapBJ_Limits=_,_,1,10000
 _SetPlayerHandicapBJ_Category=TC_PLAYER
 
-SetPlayerHandicapDamageBJ=0,player,real
-_SetPlayerHandicapDamageBJ_Defaults=Player00,100
-_SetPlayerHandicapDamageBJ_Limits=_,_,0,_
-_SetPlayerHandicapDamageBJ_Category=TC_PLAYER
-
-SetPlayerHandicapReviveTimeBJ=0,player,real
-_SetPlayerHandicapReviveTimeBJ_Defaults=Player00,100
-_SetPlayerHandicapReviveTimeBJ_Limits=_,_,0,_
-_SetPlayerHandicapReviveTimeBJ_Category=TC_HERO
-
 SetPlayerOnScoreScreenBJ=0,showhideoption,player
 _SetPlayerOnScoreScreenBJ_Defaults=ShowHideHide,Player00
 _SetPlayerOnScoreScreenBJ_Category=TC_PLAYER
@@ -5687,30 +5242,6 @@ _SetPlayerOnScoreScreenBJ_Category=TC_PLAYER
 SetPlayerName=1,player,StringExt
 _SetPlayerName_Defaults=Player00,_
 _SetPlayerName_Category=TC_PLAYER
-
-CreateCommandButtonEffectBJ=1,abilcode,unitorderEx
-_CreateCommandButtonEffectBJ_Defaults=
-_CreateCommandButtonEffectBJ_Category=TC_PLAYER
-
-CreateTrainCommandButtonEffectBJ=1,unitcode
-_CreateTrainCommandButtonEffectBJ_Defaults=
-_CreateTrainCommandButtonEffectBJ_Category=TC_PLAYER
-
-CreateBuildCommandButtonEffectBJ=1,unitcode
-_CreateBuildCommandButtonEffectBJ_Defaults=
-_CreateBuildCommandButtonEffectBJ_Category=TC_PLAYER
-
-CreateUpgradeCommandButtonEffectBJ=1,techcode
-_CreateUpgradeCommandButtonEffectBJ_Defaults=
-_CreateUpgradeCommandButtonEffectBJ_Category=TC_PLAYER
-
-CreateLearnCommandButtonEffectBJ=1,heroskillcode
-_CreateLearnCommandButtonEffectBJ_Defaults=
-_CreateLearnCommandButtonEffectBJ_Category=TC_PLAYER
-
-DestroyCommandButtonEffect=1,commandbuttoneffect
-_DestroyCommandButtonEffect_Defaults=
-_DestroyCommandButtonEffect_Category=TC_PLAYER
 
 
 // Player Group actions
@@ -5819,7 +5350,7 @@ ClearSelectionForPlayer=1,player
 _ClearSelectionForPlayer_Defaults=Player00
 _ClearSelectionForPlayer_Category=TC_UNITSEL
 
-SelectGroupForPlayerBJ=0,group,player
+SelectGroupForPlayerBJ=1,group,player
 _SelectGroupForPlayerBJ_Defaults=_,Player00
 _SelectGroupForPlayerBJ_Category=TC_UNITSEL
 
@@ -6077,7 +5608,7 @@ CreateCorpseLocBJ=0,unitcode,player,location
 _CreateCorpseLocBJ_Defaults=hfoo,Player00,GetRectCenter
 _CreateCorpseLocBJ_Category=TC_UNIT
 
-CreatePermanentCorpseLocBJ=0,corpsetype,unitcode,player,location,real
+CreatePermanentCorpseLocBJ=1,corpsetype,unitcode,player,location,real
 _CreatePermanentCorpseLocBJ_Defaults=CorpseTypeBone,hfoo,Player00,GetRectCenter,GetRandomDirectionDeg
 _CreatePermanentCorpseLocBJ_Limits=_,_,_,_,_,_,_,_,0,360
 _CreatePermanentCorpseLocBJ_Category=TC_UNIT
@@ -6109,10 +5640,6 @@ _ShowUnitShow_Category=TC_UNIT
 SetUnitColor=0,unit,playercolor
 _SetUnitColor_Defaults=GetTriggerUnit,Color00
 _SetUnitColor_Category=TC_UNIT
-
-BlzShowUnitTeamGlow=0,unit,boolean
-_BlzShowUnitTeamGlow_Defaults=GetTriggerUnit,FALSE
-_BlzShowUnitTeamGlow_Category=TC_UNIT
 
 SetUnitOwner=0,unit,player,colorchangeoption
 _SetUnitOwner_Defaults=_,Player00,ChangeColorTrue
@@ -6254,11 +5781,6 @@ BlzSetItemIconPath=0,item,imagefile
 _BlzSetItemIconPath_Defaults=GetLastCreatedItem,_
 _BlzSetItemIconPath_Category=TC_ITEM
 
-BlzSetItemSkin=0,item,integer
-_BlzSetItemSkin_Defaults=GetLastCreatedItem,'tdx2'
-_BlzSetItemSkin_Limits=_,_,_,_
-_BlzSetItemSkin_Category=TC_ITEM
-
 BlzSetUnitMaxHP=0,unit,integer
 _BlzSetUnitMaxHP_Defaults=GetTriggerUnit,500
 _BlzSetUnitMaxHP_Limits=_,_,1,_
@@ -6273,16 +5795,6 @@ BlzSetUnitArmor=0,unit,real
 _BlzSetUnitArmor_Defaults=GetTriggerUnit,0.00
 _BlzSetUnitArmor_Limits=_,_,0.00,_
 _BlzSetUnitArmor_Category=TC_UNIT
-
-BlzSetUnitSkin=0,unit,integer
-_BlzSetUnitSkin_Defaults=GetTriggerUnit,'Hamg'
-_BlzSetUnitSkin_Limits=_,_,_,_
-_BlzSetUnitSkin_Category=TC_UNIT
-
-//BlzSetDestructableSkin=0,destructable,integer
-//_BlzSetDestructableSkin_Defaults=GetLastCreatedDestructable,'LTlt'
-//_BlzSetDestructableSkin_Limits=_,_,_,_
-//_BlzSetDestructableSkin_Category=TC_UNIT
 
 BlzUnitHideAbility=0,unit,abilcode,boolean
 _BlzUnitHideAbility_Defaults=GetTriggerUnit,_,true
@@ -6795,7 +6307,7 @@ _SetUnitAbilityLevelSwapped_Category=TC_UNIT
 
 // Unit Group actions
 // Specially handled by the editor
-ForGroupMultiple=0,group
+ForGroupMultiple=1,group
 _ForGroupMultiple_Defaults=GetUnitsInRectAll
 _ForGroupMultiple_Category=TC_UNITGROUP
 _ForGroupMultiple_ScriptName=ForGroupBJ
@@ -6944,34 +6456,10 @@ _DestroyFogModifier_Category=TC_VISIBILITY
 //
 // Note: Operators are specially handled by the editor
 
-// returns string
-ParseTags=1,1,string,string
-_ParseTags_Defaults=
-_ParseTags_Category=TC_ABILITY
-
-// returns boolean
-SetSoundFacialAnimationLabel=0,1,boolean,sound,string
-_SetSoundFacialAnimationLabel_Defaults=
-_SetSoundFacialAnimationLabel_Category=TC_SOUND
-
-// returns boolean
-SetSoundFacialAnimationGroupLabel=0,1,boolean,sound,string
-_SetSoundFacialAnimationGroupLabel_Defaults=
-_SetSoundFacialAnimationGroupLabel_Category=TC_SOUND
-
-//returns boolean
-SetSoundFacialAnimationSetFilepath=0,1,boolean,sound,string
-_SetSoundFacialAnimationSetFilepath_Defaults=
-_SetSoundFacialAnimationSetFilepath_Category=TC_SOUND
-
 // returns boolean
 BlzIsTargetIndicatorEnabled=0,1,boolean
 _BlzIsTargetIndicatorEnabled_Defaults=
 _BlzIsTargetIndicatorEnabled_Category=TC_CINEMATIC
-
-SkinManagerGetLocalPath=0,1,string,string
-_SkinManagerGetLocalPath_Defaults=_
-_SkinManagerGetLocalPath_Category=TC_CINEMATIC
 
 IsDestructableAliveBJ=0,0,boolean,destructable
 _IsDestructableAliveBJ_Defaults=GetLastCreatedDestructable
@@ -7948,7 +7436,7 @@ _BlzGetAbilityManaCost_Category=TC_ABILITY
 
 BlzGetUnitAbilityManaCost=0,1,integer,unit,abilcode,integer
 _BlzGetUnitAbilityManaCost_Defaults=GetTriggerUnit,_,0
-_BlzGetUnitAbilityManaCost_Limits=_,_,_,_,0,_
+_BlzGetUnitAbilityManaCost_Limits-_,_,_,_,0,_
 _BlzGetUnitAbilityManaCost_Category=TC_UNIT
 
 BlzGetAbilityIntegerField=0,1,integer,ability,abilityintegerfield
@@ -7988,18 +7476,6 @@ _BlzBitAnd_Category=TC_MATH
 BlzBitXor=0,1,integer,integer,integer
 _BlzBitXor_Defaults=0,0
 _BlzBitXor_Category=TC_MATH
-
-BlzGetUnitSkin=0,1,integer,unit
-_BlzGetUnitSkin_Defaults=GetTriggerUnit
-_BlzGetUnitSkin_Category=TC_UNIT
-
-BlzGetItemSkin=0,1,integer,item
-_BlzGetItemSkin_Defaults=GetLastCreatedItem
-_BlzGetItemSkin_Category=TC_ITEM
-
-// BlzGetDestructableSkin=0,1,integer,destructable
-// _BlzGetDestructableSkin_Defaults=GetLastCreatedDestructable
-// _BlzGetDestructableSkin_Category=TC_UNIT
 
 // returns real
 OperatorReal=0,1,real,real,ArithmeticOperator,real
@@ -8212,10 +7688,6 @@ _Atan2BJ_Category=TC_MATH
 GetPlayerHandicapXPBJ=0,0,real,player
 _GetPlayerHandicapXPBJ_Defaults=Player00
 _GetPlayerHandicapXPBJ_Category=TC_PLAYER
-
-GetPlayerHandicapReviveTimeBJ=0,0,real,player
-_GetPlayerHandicapReviveTimeBJ_Defaults=Player00
-_GetPlayerHandicapReviveTimeBJ_Category=TC_PLAYER
 
 GetPlayerHandicapBJ=0,0,real,player
 _GetPlayerHandicapBJ_Defaults=Player00
@@ -9218,12 +8690,6 @@ _GetLastCreatedEffectBJ_Defaults=
 _GetLastCreatedEffectBJ_Category=TC_LAST
 
 
-// returns command button effect
-GetLastCreatedCommandButtonEffectBJ=0,0,commandbuttoneffect
-_GetLastCreatedCommandButtonEffectBJ_Defaults=
-_GetLastCreatedCommandButtonEffectBJ_Category=TC_LAST
-
-
 // returns lightning
 GetLastCreatedLightningBJ=1,0,lightning
 _GetLastCreatedLightningBJ_Defaults=
@@ -9240,12 +8706,6 @@ _GetLastCreatedImage_Category=TC_LAST
 GetLastCreatedUbersplat=1,0,ubersplat
 _GetLastCreatedUbersplat_Defaults=
 _GetLastCreatedUbersplat_Category=TC_LAST
-
-
-// returns minimapicon
-GetLastCreatedMinimapIcon=1,0,minimapicon
-_GetLastCreatedMinimapIcon_Defaults=
-_GetLastCreatedMinimapIcon_Category=TC_LAST
 
 
 // returns weathereffect
@@ -9359,6 +8819,7 @@ _GetLastCreatedHashtableBJ_Category=TC_LAST
 GetLastCreatedTextTag=1,0,texttag
 _GetLastCreatedTextTag_Defaults=
 _GetLastCreatedTextTag_Category=TC_LAST
+
 
 
 //***************************************************************************
