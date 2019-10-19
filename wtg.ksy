@@ -138,8 +138,8 @@ types:
 
       - id: elements
         type: element
-        repeat: expr
-        repeat-expr: element_count - 1
+        repeat: eos
+        # repeat-expr: element_count - 1
 
   deleted_item_ids:
     seq:
