@@ -11,7 +11,7 @@ $dh = opendir($dir);
 
 $files = [];
 while (($f = readdir($dh)) !== false) {
-    if (strpos($f, '.wtg') >= 0) {
+    if (strpos($f, '.wtg') !== false) {
         $files[] = $f;
     }
 }
