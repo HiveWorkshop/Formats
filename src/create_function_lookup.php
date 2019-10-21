@@ -50,37 +50,50 @@ class Ini
     }
 }
 
-$triggerDataFile = dirname(__FILE__).'/../resources/TriggerData.txt';
-$triggerDataParser = new Ini(file_get_contents($triggerDataFile));
-$triggerDataParser->parse();
-$areas = [
-    'TriggerActions',
-    'TriggerEvents',
-    'TriggerConditions',
-    'TriggerCalls',
-];
-$functionLookup = [];
-foreach ($areas as $area) {
-    foreach ($triggerDataParser->data->groups[$area] as $nameValue) {
-        $name = $nameValue['name'];
-        $value = $nameValue['value'];
-        if ($name[0] == '_') {
-            continue;
+function getFunctionList($triggerDataFile)
+{
+    $triggerDataParser = new Ini(file_get_contents($triggerDataFile));
+    $triggerDataParser->parse();
+    $areas = [
+        'TriggerActions',
+        'TriggerEvents',
+        'TriggerConditions',
+        'TriggerCalls',
+    ];
+    $index = [];
+    foreach ($areas as $area) {
+        foreach ($triggerDataParser->data->groups[$area] as $nameValue) {
+            $name = $nameValue['name'];
+            $value = $nameValue['value'];
+            if ($name[0] == '_') {
+                continue;
+            }
+            $args = explode(',', $value);
+            $args = array_values(array_filter($args, function ($arg) {
+                return $arg != '0' && $arg != '1' && $arg != 'nothing' && trim($arg) != '';
+            }));
+            $index[$name] = $area == 'TriggerCalls' ? (count($args) - 1) : count($args);
         }
-        $args = explode(',', $value);
-        $args = array_values(array_filter($args, function ($arg) {
-            return $arg != '0' && $arg != '1' && $arg != 'nothing' && trim($arg) != '';
-        }));
-        $functionLookup[$name] = $area == 'TriggerCalls' ? (count($args) - 1) : count($args);
     }
+
+    // Sort functions
+    ksort($index);
+
+    return $index;
 }
 
-// Sort functions
-ksort($functionLookup);
+$lookups = [];
+foreach (['TriggerData.txt', 'TriggerDataWEU.txt', 'TriggerDataYDWE.txt'] as $filename) {
+    $path = dirname(__FILE__).'/../resources/'.$filename;
+    $lookups[$filename] = getFunctionList($path);
+}
 
 $code = [];
-foreach ($functionLookup as $name => $argCount) {
-    $code[] = "            '\"$name\"': parameters($argCount)";
+foreach ($lookups as $filename => $lookup) {
+    $code[] = "# $filename";
+    foreach ($lookup as $name => $argCount) {
+        $code[] = "            '\"$name\"': parameters($argCount)";
+    }
 }
 $code = implode("\n", $code);
 
