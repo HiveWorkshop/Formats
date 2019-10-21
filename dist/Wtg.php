@@ -4227,8 +4227,7 @@ class ParametersByName extends \Kaitai\Struct\Struct {
                 $this->_m_body = new Parameters(2, $this->_io, $this, $this->_root);
                 break;
             default:
-                $this->_m_body = new Error($this->_io, $this, $this->_root);
-                break;
+                throw new Exception("Unexpected function name '{$this->name()}'");
         }
     }
     protected $_m_body;
