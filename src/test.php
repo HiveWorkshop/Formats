@@ -64,10 +64,10 @@ if (in_array('--parse-single', $argv)) {
             continue;
         }
     }
-} elseif (in_array('--parse-files', $argv)) {
+} elseif (in_array('--parse-dir', $argv)) {
     $dir = null;
     foreach ($argv as $i => $v) {
-        if ($v == '--parse-files') {
+        if ($v == '--parse-dir') {
             if (!empty($argv[$i + 1])) {
                 $dir = $argv[$i + 1];
             }

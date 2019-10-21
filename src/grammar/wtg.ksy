@@ -2,7 +2,6 @@ meta:
   id: wtg
   file-extension: wtg
   endian: le
-  ks-debug: true
 
 seq:
   - id: header
@@ -199,7 +198,7 @@ types:
             16: trigger
             32: trigger
             64: variable_reference
-            _: error("Unexpected element type")
+            _: error
 
   variable_reference:
     seq:
@@ -338,13 +337,9 @@ types:
         repeat-expr: parameter_count
 
   error:
-    params:
-      - id: error_string
-        type: str
-
     seq:
       - id: error
-        contents: error_string
+        contents: 'UNEXPECTED_WTF'
 
   parameters_by_name:
 
@@ -355,7 +350,6 @@ types:
 
     seq:
       - id: body
-        size: 0
         type:
           switch-on: name
           cases:
@@ -1609,4 +1603,4 @@ types:
             '"GetLastCreatedHashtableBJ"': parameters(0)
             '"GetLastCreatedTextTag"': parameters(0)
 # END_PARAMETERS
-            _: error("Unexpected function name")
+            _: error
