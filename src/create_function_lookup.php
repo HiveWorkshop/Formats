@@ -1,5 +1,7 @@
 <?php
 
+ini_set('memory_limit', '1024M');
+
 class Ini
 {
     public $data;
@@ -48,7 +50,7 @@ class Ini
     }
 }
 
-$triggerDataFile = dirname(__FILE__).'/resources/TriggerData.txt';
+$triggerDataFile = dirname(__FILE__).'/../resources/TriggerData.txt';
 $triggerDataParser = new Ini(file_get_contents($triggerDataFile));
 $triggerDataParser->parse();
 $areas = [
@@ -73,33 +75,20 @@ foreach ($areas as $area) {
     }
 }
 
-echo
-'meta:
-  id: function_info
-
-types:
-  u4_container:
-    params:
-      - id: value
-        type: u4
-
-instances:
-  argument_count:
-    value: argument_count_container.as<u4_container>.value
-
-seq:
-  - id: name
-    type: strz
-    encoding: UTF-8
-  - id: argument_count_container
-    size: 0
-    type:
-      switch-on: name
-      cases:
-';
+$code = [];
 foreach ($functionLookup as $name => $argCount) {
-    echo "        '\"$name\"': u4_container($argCount)
-";
+    $code[] = "            '\"$name\"': parameters($argCount)";
 }
-echo "        _: u4_container(0)
-";
+$code = implode("\n", $code);
+
+$wtgFile = __DIR__ . '/grammar/wtg.ksy';
+
+$f = file_get_contents($wtgFile);
+
+$f = preg_replace('~
+(\#\ BEGIN_PARAMETERS [\r\n]+)
+.*?
+([\r\n]+ \#\ END_PARAMETERS)
+~xs', "\$1$code\$2", $f);
+
+file_put_contents($wtgFile, $f);

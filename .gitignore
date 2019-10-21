@@ -1,2 +1,3 @@
-/vendor/
+/src/vendor/
 /samples/wtg*
+.DS_Store

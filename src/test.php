@@ -1,34 +1,53 @@
 <?php
 
-require './vendor/autoload.php';
-require './dist/FunctionInfo.php';
-require './dist/Wtg.php';
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../dist/Wtg.php';
 
 ini_set('memory_limit', '1024M');
 
-$dir = './samples/wtg_2147483652';
-$dh = opendir($dir);
+function getFilesInDir($dir)
+{
+    // $dir = './samples/wtg_2147483652';
+    $dh = opendir($dir);
 
-$files = [];
-while (($f = readdir($dh)) !== false) {
-    if (strpos($f, '.wtg') !== false) {
-        $files[] = $f;
+    if (!$dh) {
+        exit("Directory $dir could not be opened.");
     }
+
+    $files = [];
+    while (($f = readdir($dh)) !== false) {
+        if (strpos($f, '.wtg') !== false) {
+            $files[] = $f;
+        }
+    }
+    return $files;
 }
 
-if (in_array('--scan-single', $argv)) {
+if (in_array('--parse-single', $argv)) {
+    $path = null;
     foreach ($argv as $i => $v) {
-        if ($v == '--scan-single') {
-            if (!empty($argv[$i + 1])) {
-                $wtg = \Wtg\Wtg::fromFile($argv[$i + 1]);
-                echo "Success\n";
-            } else {
-                echo "Missing file argument\n";
-            }
+        if ($v == '--parse-single' &&!empty($argv[$i + 1])) {
+            $path = $argv[$i + 1];
             break;
         }
     }
+    if (!$path) {
+        echo "Missing file argument\n";
+        exit;
+    }
+    $wtg = \Wtg\Wtg::fromFile($argv[$i + 1]);
 } elseif (in_array('--scan-versions', $argv)) {
+    $dir = null;
+    foreach ($argv as $i => $v) {
+        if ($v == '--scan-versions' && !empty($argv[$i + 1])) {
+            $dir = $argv[$i + 1];
+        }
+    }
+    if (!$dir) {
+        echo "Missing dir argument\n";
+        exit;
+    }
+    $files = getFilesInDir($dir);
     foreach ($files as $i => $f) {
         $magic = '';
         $version = -1;
@@ -46,6 +65,20 @@ if (in_array('--scan-single', $argv)) {
         }
     }
 } elseif (in_array('--parse-files', $argv)) {
+    $dir = null;
+    foreach ($argv as $i => $v) {
+        if ($v == '--parse-files') {
+            if (!empty($argv[$i + 1])) {
+                $dir = $argv[$i + 1];
+            }
+            break;
+        }
+    }
+    if (!$dir) {
+        echo "Missing dir argument\n";
+        exit;
+    }
+    $files = getFilesInDir($dir);
     $numTasks = 1;
     $task = 1;
     foreach ($argv as $v) {
