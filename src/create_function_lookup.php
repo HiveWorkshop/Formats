@@ -75,13 +75,16 @@ foreach ($areas as $area) {
     }
 }
 
+// Sort functions
+ksort($functionLookup);
+
 $code = [];
 foreach ($functionLookup as $name => $argCount) {
     $code[] = "            '\"$name\"': parameters($argCount)";
 }
 $code = implode("\n", $code);
 
-$wtgFile = __DIR__ . '/grammar/wtg.ksy';
+$wtgFile = __DIR__.'/grammar/wtg.ksy';
 
 $f = file_get_contents($wtgFile);
 
