@@ -161,6 +161,10 @@ $parameterTypeEnum = [
     'parameter' => 3,
 ];
 
+// Put conditions inside parameters
+$lookups['parameter'] = array_merge($lookups['parameter'], $lookups['condition']);
+
+// Generate structs for various argument sizes
 $argStructs = [];
 foreach ($lookups as $area => $lookup) {
     foreach ($lookup as $arguments) {
@@ -178,15 +182,10 @@ params:
 
 seq:";
             foreach ($arguments as $i => $arg) {
-                $xxx = "auto_construct_{$arg}";
-                if ($arg == 'parameter') {
-                    $xxx = 'parameter';
-                }
-                $xxx = "'parameter(game, {$parameterTypeEnum[$arg]})'";
                 $code .=
 "
   - id: arg_$i
-    type: $xxx";
+    type: 'parameter(game, {$parameterTypeEnum[$arg]})'";
             }
             if (!$arguments) {
                 $code .= '  []
@@ -198,6 +197,7 @@ seq:";
     }
 }
 
+// Generate structs for main container types event, condition, action, parameter
 foreach ($lookups as $area => $index) {
     // $area is event, condition, action, parameter
     $structName = "auto_construct_$area";
