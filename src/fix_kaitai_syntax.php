@@ -7,10 +7,8 @@ $dir = __DIR__.'/../dist';
 $dh = opendir($dir);
 while (($f = readdir($dh)) !== false) {
     if (strpos($f, '.php') === false) {
-        echo "Skipping $f\n";
         continue;
     }
-    echo "Rewriting $f\n";
 
     $path = "$dir/$f";
     $data = file_get_contents($path);

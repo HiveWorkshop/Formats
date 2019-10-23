@@ -96,7 +96,6 @@ function getFunctionList($file)
     return $index;
 }
 
-$lookups = [];
 foreach (['TriggerData.txt', 'TriggerDataWEU.txt', 'TriggerDataYDWE.txt'] as $filename) {
     $path = __DIR__.'/../resources/'.$filename;
     $index = getFunctionList($path);
@@ -112,6 +111,9 @@ foreach (['TriggerData.txt', 'TriggerDataWEU.txt', 'TriggerDataYDWE.txt'] as $fi
         }
     }
 }
+
+$lookups['action']['InitAdvancedTriggers'] = [];
+$lookups['action']['Erdbeben'] = ['parameter', 'parameter'];
 
 function shorten($arg)
 {
