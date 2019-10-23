@@ -1,7 +1,14 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/../dist/Wtg.php';
+require __DIR__.'/vendor/autoload.php';
+
+$dh = opendir(__DIR__.'/../dist');
+while (($f = readdir($dh)) !== false) {
+    if (strpos($f, '.php') === false) {
+        continue;
+    }
+    require __DIR__."/../dist/$f";
+}
 
 ini_set('memory_limit', '1024M');
 
@@ -20,13 +27,14 @@ function getFilesInDir($dir)
             $files[] = $f;
         }
     }
+
     return $files;
 }
 
 if (in_array('--parse-single', $argv)) {
     $path = null;
     foreach ($argv as $i => $v) {
-        if ($v == '--parse-single' &&!empty($argv[$i + 1])) {
+        if ($v == '--parse-single' && !empty($argv[$i + 1])) {
             $path = $argv[$i + 1];
             break;
         }
@@ -35,7 +43,7 @@ if (in_array('--parse-single', $argv)) {
         echo "Missing file argument\n";
         exit;
     }
-    $wtg = \Wtg\Wtg::fromFile($argv[$i + 1]);
+    $wtg = Wtg::fromFile($argv[$i + 1]);
 } elseif (in_array('--scan-versions', $argv)) {
     $dir = null;
     foreach ($argv as $i => $v) {
@@ -126,7 +134,7 @@ if (in_array('--parse-single', $argv)) {
         }
 
         try {
-            $wtg = \Wtg\Wtg::fromFile("$dir/$f");
+            $wtg = Wtg::fromFile("$dir/$f");
             $version = $wtg->header()->fileVersion();
             if (empty($successVersions[$version])) {
                 $successVersions[$version] = 0;

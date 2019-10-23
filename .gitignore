@@ -1,3 +1,5 @@
 /src/vendor/
 /samples/wtg*
 .DS_Store
+/dist/
+/src/grammar/auto_*
