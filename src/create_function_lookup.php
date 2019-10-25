@@ -153,34 +153,18 @@ function shorten($arg)
     }
 }
 
-function getArgStructName($area, array $arguments)
+function getArgStructName(array $arguments)
 {
-    $shortened = array_map('shorten', $arguments);
-    $grouped = array_reduce(
-        $shortened,
-        function ($carry, $item) {
-            $lastIndex = count($carry) - 1;
-            if (!$carry || $carry[$lastIndex][0] != $item) {
-                $carry[] = [$item, 1];
-            } else {
-                ++$carry[$lastIndex][1];
-            }
-
-            return $carry;
-        },
-        []
-    );
-    $stringifiedGroups = array_map(function ($group) {
-        return $group[1].'_'.$group[0];
-    }, $grouped);
-    $key = implode('_', $stringifiedGroups);
-    if (!$key) {
-        $key = 'noargs';
+    $argCount = count($arguments);
+    if ($argCount == 0) {
+        $suffix = 'noargs';
+    } elseif ($argCount == 1) {
+        $suffix = '1arg';
+    } else {
+        $suffix = $argCount.'args';
     }
 
-    $key = "auto_{$area}_struct_{$key}";
-
-    return $key;
+    return 'auto_struct_'.$suffix;
 }
 
 $parameterTypeEnum = [
@@ -196,10 +180,12 @@ $lookups['parameter'] = array_merge($lookups['parameter'], $lookups['condition']
 // Generate structs for various argument sizes
 $argStructs = [];
 foreach ($lookups as $area => $lookup) {
-    foreach ($lookup as $arguments) {
-        $structName = getArgStructName($area, $arguments);
-        if (empty($argStructs[$structName])) {
-            $code =
+    foreach ($lookup as $functionName => $arguments) {
+        $structName = getArgStructName($arguments);
+        if (!empty($argStructs[$structName])) {
+            continue;
+        }
+        $code =
 "meta:
   id: $structName
   imports:
@@ -208,21 +194,29 @@ foreach ($lookups as $area => $lookup) {
 params:
   - id: game
     type: u4
+";
 
-seq:";
-            foreach ($arguments as $i => $arg) {
-                $code .=
+        foreach ($arguments as $i => $arg) {
+            $code .=
+"  - id: arg{$i}_type
+    type: u4
+";
+        }
+
+        $code .= '
+seq:';
+        foreach ($arguments as $i => $arg) {
+            $code .=
 "
   - id: arg_$i
-    type: 'parameter(game, {$parameterTypeEnum[$arg]})'";
-            }
-            if (!$arguments) {
-                $code .= '  []
-';
-            }
-            $argStructs[$structName] = $code;
-            file_put_contents(__DIR__.'/grammar/'.$structName.'.ksy', $code);
+    type: 'parameter(game, arg{$i}_type)'";
         }
+        if (!$arguments) {
+            $code .= ' []
+';
+        }
+        $argStructs[$structName] = $code;
+        file_put_contents(__DIR__.'/grammar/'.$structName.'.ksy', $code);
     }
 }
 
@@ -233,11 +227,13 @@ foreach ($lookups as $area => $index) {
     $switchCode = '';
     $imports = [];
     foreach ($index as $functionName => $arguments) {
-        $argsContainerName = getArgStructName($area, $arguments);
+        $argsContainerName = getArgStructName($arguments);
         $imports[$argsContainerName] = true;
         $switchCode .=
-"        '\"$functionName\"': $argsContainerName(game)
-";
+"        '\"$functionName\"': $argsContainerName(game".(count($arguments) ? ', ' : '').implode(', ', array_map(function ($arg, $i) use ($parameterTypeEnum) {
+    return $parameterTypeEnum[$arg];
+}, $arguments, array_keys($arguments))).')
+';
     }
     $importCode = '';
     foreach (array_keys($imports) as $import) {
