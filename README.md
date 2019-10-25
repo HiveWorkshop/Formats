@@ -8,7 +8,8 @@
 
     php ./create_function_lookup.php \
     && kaitai-struct-compiler --target php --outdir ../dist ./grammar/wtg.ksy \
-    && php ./fix_kaitai_syntax.php 
+    && php ./fix_kaitai_syntax.php \
+    && git checkout ../dist/WtgError.php
 
 # Run
 

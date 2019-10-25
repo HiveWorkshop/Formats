@@ -113,7 +113,34 @@ foreach (['TriggerData.txt', 'TriggerDataWEU.txt', 'TriggerDataYDWE.txt'] as $fi
 }
 
 $lookups['action']['InitAdvancedTriggers'] = [];
-$lookups['action']['Erdbeben'] = ['parameter', 'parameter'];
+$lookups['action']['Erdbeben'] = array_fill(0, 2, 'parameter');
+$lookups['action']['TargetHeal'] = array_fill(0, 2, 'parameter');
+$lookups['action']['ChangeDamage'] = array_fill(0, 3, 'parameter');
+// $lookups['action']['AddMoveSlotEvent'] = array_fill(0, 2, 'parameter');
+$lookups['action']['Gewitter'] = array_fill(0, 2, 'parameter');
+$lookups['action']['UnitTypeIsInRegion'] = array_fill(0, 2, 'parameter');
+$lookups['action']['TurnRegrowingTreesOn'] = ['parameter'];
+$lookups['action']['FadingText'] = array_fill(0, 6, 'parameter');
+// $lookups['action']['GetTriggerUnit'] = [];
+
+$lookups['parameter']['returnstring'] = ['parameter'];
+
+$lookups['parameter']['GetXOrder'] = ['parameter'];
+$lookups['parameter']['GetXTargetLoc'] = ['parameter'];
+$lookups['parameter']['GetXTargetItem'] = ['parameter'];
+$lookups['parameter']['GetXTargetDest'] = ['parameter'];
+$lookups['parameter']['GetXTargetUnit'] = ['parameter'];
+$lookups['parameter']['GetXLearnedSkill'] = ['parameter'];
+$lookups['parameter']['GetXResearchedUpgrade'] = ['parameter'];
+$lookups['parameter']['GetXSummonedItem'] = ['parameter'];
+$lookups['parameter']['GetXAttackedUnit'] = ['parameter'];
+$lookups['parameter']['GetXAcquiredItem'] = ['parameter'];
+$lookups['parameter']['GetXDroppedItem'] = ['parameter'];
+$lookups['parameter']['GetXSoldUnit'] = ['parameter'];
+$lookups['parameter']['GetXSoldItem'] = ['parameter'];
+$lookups['parameter']['GetXTrainedUnit'] = ['parameter'];
+
+$lookups['event']['AddMoveSlotEvent'] = ['parameter'];
 
 function shorten($arg)
 {
