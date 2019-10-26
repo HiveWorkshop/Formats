@@ -186,6 +186,7 @@ $lookups['action']['WaitForAnyOrderEvent'] = ['parameter'];
 $lookups['action']['MorphUnit'] = array_fill(0, 2, 'parameter');
 $lookups['action']['MakeHeroSelectable'] = ['parameter'];
 $lookups['action']['InitCommander'] = [];
+$lookups['action']['YDWESetAnyTypeLocalVariable'] = array_fill(0, 3, 'parameter');
 
 $lookups['parameter']['returnstring'] = ['parameter'];
 
@@ -235,6 +236,9 @@ $lookups['parameter']['WordParser'] = array_fill(0, 2, 'parameter');
 $lookups['parameter']['DisableTrigger'] = ['parameter'];
 $lookups['parameter']['UnitTypeIsInUnitGroup'] = array_fill(0, 2, 'parameter');
 $lookups['parameter']['GetUnitGoldCostById'] = ['parameter'];
+// Only one map and adding these doesn't make parsing complete.
+// $lookups['parameter']['YDWEGetAnyTypeLocalVariable'] = ['parameter'];
+// $lookups['parameter']['UnitAlive'] = ['parameter'];
 
 $lookups['event']['AddMoveSlotEvent'] = ['parameter'];
 $lookups['event']['AddSelectSpecificHeroEvent'] = [];
