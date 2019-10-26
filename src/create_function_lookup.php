@@ -248,11 +248,11 @@ function getArgStructName(array $arguments)
 {
     $argCount = count($arguments);
     if ($argCount == 0) {
-        $suffix = 'noargs';
+        $suffix = 'no_args';
     } elseif ($argCount == 1) {
-        $suffix = '1arg';
+        $suffix = '1_arg';
     } else {
-        $suffix = $argCount.'args';
+        $suffix = $argCount.'_args';
     }
 
     return 'auto_struct_'.$suffix;
@@ -326,12 +326,14 @@ foreach ($lookups as $area => $index) {
 }, $arguments, array_keys($arguments))).')
 ';
     }
+    $switchCode = rtrim($switchCode);
     $importCode = '';
     foreach (array_keys($imports) as $import) {
         $importCode .=
 "    - $import
 ";
     }
+    $importCode = rtrim($importCode);
     $code =
 "meta:
   id: $structName
