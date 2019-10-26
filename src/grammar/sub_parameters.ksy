@@ -41,3 +41,6 @@ seq:
         3: auto_construct_parameter(game, function_name)
         _: wtg_error(function_name)
     if: begin_parameters > 0
+  - id: unknown_0
+    type: u4
+    if: game == 7
