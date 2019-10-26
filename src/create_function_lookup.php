@@ -116,15 +116,80 @@ $lookups['action']['InitAdvancedTriggers'] = [];
 $lookups['action']['Erdbeben'] = array_fill(0, 2, 'parameter');
 $lookups['action']['TargetHeal'] = array_fill(0, 2, 'parameter');
 $lookups['action']['ChangeDamage'] = array_fill(0, 3, 'parameter');
-// $lookups['action']['AddMoveSlotEvent'] = array_fill(0, 2, 'parameter');
 $lookups['action']['Gewitter'] = array_fill(0, 2, 'parameter');
 $lookups['action']['UnitTypeIsInRegion'] = array_fill(0, 2, 'parameter');
 $lookups['action']['TurnRegrowingTreesOn'] = ['parameter'];
 $lookups['action']['FadingText'] = array_fill(0, 6, 'parameter');
-// $lookups['action']['GetTriggerUnit'] = [];
+$lookups['action']['GoldText'] = array_fill(0, 3, 'parameter');
+$lookups['action']['SetHeroSaveLoadOptions'] = array_fill(0, 2, 'parameter');
+$lookups['action']['SaveHeroData'] = array_fill(0, 2, 'parameter');
+$lookups['action']['RestoreHeroAtLoc'] = array_fill(0, 3, 'parameter');
+$lookups['action']['AddSpecialEffectLocWithTimer'] = array_fill(0, 3, 'parameter');
+$lookups['action']['SetCustomStringValue'] = array_fill(0, 2, 'parameter');
+$lookups['action']['SetCustomRealValue'] = array_fill(0, 2, 'parameter');
+$lookups['action']['SetCustomBooleanValue'] = array_fill(0, 2, 'parameter');
+$lookups['action']['PlaySoundForPlayer'] = array_fill(0, 2, 'parameter');
+$lookups['action']['MakeUnitUnselectable'] = ['parameter'];
+$lookups['action']['MakeUnitBurn'] = array_fill(0, 3, 'parameter');
+$lookups['action']['AddSpecialEffectTargetUnitWithTimer'] = array_fill(0, 4, 'parameter');
+$lookups['action']['SetCinematicSkipClearTextState'] = ['parameter'];
+$lookups['action']['CinematicModeBJAdvanced'] = array_fill(0, 3, 'parameter');
+$lookups['action']['CinematicFilterGenericForPlayer'] = array_fill(0, 12, 'parameter');
+$lookups['action']['CamFollowUnit'] = array_fill(0, 3, 'parameter');
+$lookups['action']['SetFollowDetails'] = array_fill(0, 3, 'parameter');
+$lookups['action']['RestoreHeroData'] = array_fill(0, 2, 'parameter');
+$lookups['action']['CamStopFollowing'] = ['parameter'];
+$lookups['action']['CreateMissileEffect'] = array_fill(0, 5, 'parameter');
+$lookups['action']['CreateSelectableHero'] = array_fill(0, 3, 'parameter');
+$lookups['action']['ErrorMsg'] = array_fill(0, 2, 'parameter');
+$lookups['action']['CreateSFXRain'] = array_fill(0, 4, 'parameter');
+$lookups['action']['InitDebugTriggers'] = [];
+$lookups['action']['AddHeroGlowNew'] = ['parameter'];
+$lookups['action']['AdvancedLeaderboard'] = array_fill(0, 19, 'parameter');
+$lookups['action']['Voting'] = array_fill(0, 28, 'parameter');
+$lookups['action']['InitTownPortalSystem'] = array_fill(0, 2, 'parameter');
+$lookups['action']['MakeUnitSlide'] = array_fill(0, 4, 'parameter');
+$lookups['action']['TurnHeroDiedMsgOn'] = ['parameter'];
+$lookups['action']['CancelAIOrders'] = array_fill(0, 2, 'parameter');
+$lookups['action']['ChangeDefense'] = array_fill(0, 3, 'parameter');
+$lookups['action']['ChangeLife'] = array_fill(0, 3, 'parameter');
+$lookups['action']['ChangeMana'] = array_fill(0, 3, 'parameter');
+$lookups['action']['ChangeRange'] = array_fill(0, 4, 'parameter');
+$lookups['action']['MatrixStyle'] = ['parameter'];
+$lookups['action']['ActionAnd'] = array_fill(0, 2, 'parameter');
+$lookups['action']['ChangeAttackRate'] = array_fill(0, 4, 'parameter');
+$lookups['action']['CreateSpecialEffectCircle'] = array_fill(0, 5, 'parameter');
+$lookups['action']['SetFollowOptions'] = array_fill(0, 3, 'parameter');
+$lookups['action']['UnitDropAllItemsOfType'] = array_fill(0, 3, 'parameter');
+$lookups['action']['SetFollowOptions'] = array_fill(0, 3, 'parameter');
+$lookups['action']['AttachSFXRainToUnit'] = array_fill(0, 4, 'parameter');
+$lookups['action']['ReplaceUnitAdvanced'] = array_fill(0, 3, 'parameter');
+$lookups['action']['TurnPlayerLeftMsgOn'] = ['parameter'];
+$lookups['action']['RemoveBasicAbility'] = array_fill(0, 2, 'parameter');
+$lookups['action']['StartSpellEnhancer'] = [];
+$lookups['action']['WaitForEnterRectEvent'] = array_fill(0, 2, 'parameter');
+$lookups['action']['WaitForEnterRectEvent'] = array_fill(0, 2, 'parameter');
+$lookups['action']['AOEHealSimple'] = array_fill(0, 4, 'parameter');
+$lookups['action']['AttachMovingSFXToUnit'] = array_fill(0, 6, 'parameter');
+$lookups['action']['AddCustomSpellToEnhancer'] = array_fill(0, 5, 'parameter');
+$lookups['action']['DialogOhneShortcut'] = array_fill(0, 17, 'parameter');
+$lookups['action']['Transparenzverlauf'] = array_fill(0, 10, 'parameter');
+$lookups['action']['TimerMitFenster'] = array_fill(0, 6, 'parameter');
+$lookups['action']['EnableKeyboardScrolling'] = ['parameter'];
+$lookups['action']['SFXWave'] = array_fill(0, 4, 'parameter');
+$lookups['action']['ChangeMissileTargets'] = array_fill(0, 4, 'parameter');
+$lookups['action']['CreateMovingSFX'] = array_fill(0, 7, 'parameter');
+$lookups['action']['AutomaticMemoryCleanup'] = ['parameter'];
+$lookups['action']['ReplaceResizeDoodad'] = array_fill(0, 5, 'parameter');
+$lookups['action']['DestroyEffect'] = ['parameter'];
+$lookups['action']['WaitForAnyOrderEvent'] = ['parameter'];
+$lookups['action']['MorphUnit'] = array_fill(0, 2, 'parameter');
+$lookups['action']['MakeHeroSelectable'] = ['parameter'];
+$lookups['action']['InitCommander'] = [];
 
 $lookups['parameter']['returnstring'] = ['parameter'];
 
+// NOTE: Items that are both in `action` and `parameter` are likely to be miscategorized because we just enter 'parameter' for everything here.
 $lookups['parameter']['GetXOrder'] = ['parameter'];
 $lookups['parameter']['GetXTargetLoc'] = ['parameter'];
 $lookups['parameter']['GetXTargetItem'] = ['parameter'];
@@ -139,19 +204,41 @@ $lookups['parameter']['GetXDroppedItem'] = ['parameter'];
 $lookups['parameter']['GetXSoldUnit'] = ['parameter'];
 $lookups['parameter']['GetXSoldItem'] = ['parameter'];
 $lookups['parameter']['GetXTrainedUnit'] = ['parameter'];
+$lookups['parameter']['GetCustomStringValue'] = ['parameter'];
+$lookups['parameter']['GetCustomRealValue'] = ['parameter'];
+$lookups['parameter']['GetCustomBooleanValue'] = ['parameter'];
+$lookups['parameter']['GetRandomSelectionHeroType'] = [];
+$lookups['parameter']['ColoredString'] = array_fill(0, 3, 'parameter');
+$lookups['parameter']['GetAnzahlSpieler'] = [];
+$lookups['parameter']['AngleBetweenPointsXY'] = array_fill(0, 4, 'parameter');
+$lookups['parameter']['Rect2Region'] = ['parameter'];
+$lookups['parameter']['FindNextUnitMatching'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['SetUnitPositionLoc'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['HasUnitAbility'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['Abilcode2Heroskillcode'] = ['parameter'];
+$lookups['parameter']['GetRandomLocInRectOfCliffHeight'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['UnitTypeIsInRegion'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['AOEHealSimple'] = array_fill(0, 4, 'parameter');
+$lookups['parameter']['Integer2SpellId'] = ['parameter'];
+$lookups['parameter']['AngleDifference'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['DeleteSubStringFromString'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['TriggerName2Function'] = ['parameter'];
+$lookups['parameter']['RandomPointInRange'] = array_fill(0, 2, 'parameter');
+// $lookups['parameter']['SFXWave'] = array_fill(0, 4, 'parameter');
+$lookups['parameter']['String2PointOrder'] = ['parameter'];
+$lookups['parameter']['UnitRemoveItemFromSlotSwapped'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['RemoveItem'] = ['parameter'];
+$lookups['parameter']['CompareLocationsBJ'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['String2UnitOrder'] = ['parameter'];
+$lookups['parameter']['DistanceBetweenPointsXY'] = array_fill(0, 4, 'parameter');
+$lookups['parameter']['WordParser'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['DisableTrigger'] = ['parameter'];
+$lookups['parameter']['UnitTypeIsInUnitGroup'] = array_fill(0, 2, 'parameter');
+$lookups['parameter']['GetUnitGoldCostById'] = ['parameter'];
 
 $lookups['event']['AddMoveSlotEvent'] = ['parameter'];
-
-function shorten($arg)
-{
-    switch ($arg) {
-        case 'event': return 'evt';
-        case 'condition': return 'con';
-        case 'action': return 'act';
-        case 'parameter': return 'par';
-        default: return $arg;
-    }
-}
+$lookups['event']['AddSelectSpecificHeroEvent'] = [];
+$lookups['event']['AddSelectRandomHeroEvent'] = [];
 
 function getArgStructName(array $arguments)
 {
@@ -264,67 +351,3 @@ $switchCode
 ";
     file_put_contents(__DIR__.'/grammar/'.$structName.'.ksy', $code);
 }
-
-exit;
-/*
-$code = [];
-foreach ($lookups as $filename => $lookup) {
-    foreach ($lookup as $area => $index) {
-        if (empty($code[$area])) {
-            $code[$area] = [];
-        }
-        $code[$area][] = "# $filename";
-        foreach ($index as $name => $argCount) {
-            $code[$area][] = "        '\"$name\"': u4_container($argCount)";
-        }
-    }
-}
-foreach ($code as $area => $code_) {
-    $code[$area] = implode("\n", $code_);
-}
-
-function createFile($name, array $codes)
-{
-    $code = implode("\n", $codes);
-    $f =
-"meta:
-  id: $name
-  endian: le
-  imports:
-    - u4_container
-    - wtg_error
-
-instances:
-  argument_count:
-    value: argument_count_container.as<u4_container>.value
-
-seq:
-  - id: name
-    type: strz
-    encoding: UTF-8
-  - id: argument_count_container
-    size: 0
-    type:
-      switch-on: name
-      cases:
-$code
-        _: wtg_error(name)
-";
-
-    $file = __DIR__."/grammar/$name.ksy";
-    file_put_contents($file, $f);
-}
-
-createFile('eca_parameter', [
-    $code['TriggerEvents'],
-    $code['TriggerActions'],
-    $code['TriggerConditions'],
-]);
-
-createFile('function_parameter', [
-    $code['TriggerActions'],
-    // $code['TriggerEvents'],
-    $code['TriggerConditions'],
-    $code['TriggerCalls'],
-]);
-*/
