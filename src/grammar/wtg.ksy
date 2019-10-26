@@ -5,14 +5,7 @@ meta:
   imports:
     - body_post_131
     - body_pre_131
-    - category
-    - deleted_item_ids
-    - element
     - header
-    - trigger
-    - variable_reference
-    - variables
-    - wtg_error
 
 seq:
   - id: header
