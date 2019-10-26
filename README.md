@@ -1,3 +1,5 @@
+# WTG (Warcraft 3 Trigger Format)
+
 # Install and build
 
 Install the `kaitat-struct-compiler`. On macOS, you can easily do it using Homebrew:
