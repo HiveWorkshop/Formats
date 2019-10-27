@@ -8,19 +8,11 @@ meta:
     - auto_construct_parameter
     - wtg_error
 
-enums:
-  parameter_type:
-    0: event
-    1: condition
-    2: action
-    3: parameter
-
 params:
   - id: game
     type: u4
-  - id: parameter_type_
+  - id: parameter_type
     type: u4
-    enum: parameter_type
 
 seq:
   - id: function_type
@@ -32,9 +24,9 @@ seq:
     type: u4
   - id: arguments
     type:
-      switch-on: parameter_type_
+      switch-on: parameter_type
       cases:
-# Did not get the enum to work here...
+# Did not get the enum to work here, possibly because the value comes from `params`
         0: auto_construct_event(game, function_name)
         1: auto_construct_condition(game, function_name)
         2: auto_construct_action(game, function_name)

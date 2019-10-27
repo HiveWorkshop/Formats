@@ -13,12 +13,6 @@ params:
   - id: is_child
     type: u4
 
-enums:
-  eca_type:
-    0: event
-    1: condition
-    2: action
-
 seq:
   - id: type
     type: u4
@@ -39,8 +33,6 @@ seq:
         'eca_type::condition': auto_construct_condition(game, function_name)
         'eca_type::action': auto_construct_action(game, function_name)
         _: wtg_error(type)
-    # repeat: expr
-    # repeat-expr: function.argument_count
   - id: sub_eca_count
     type: u4
     if: game == 7
@@ -49,3 +41,9 @@ seq:
     repeat: expr
     repeat-expr: 'sub_eca_count > 0 ? sub_eca_count : 0'
     if: game == 7
+
+enums:
+  eca_type:
+    0: event
+    1: condition
+    2: action
