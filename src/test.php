@@ -1,5 +1,7 @@
 <?php
 
+use VindIT\Repository\Blizzard\KaitaiParser\Wtg;
+
 require __DIR__.'/vendor/autoload.php';
 
 $dh = opendir(__DIR__.'/../dist');
