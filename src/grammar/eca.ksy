@@ -19,6 +19,7 @@ seq:
     enum: eca_type
   - id: group
     type: u4
+    enum: eca_group
     if: is_child > 0
   - id: function_name
     type: strz
@@ -47,3 +48,8 @@ enums:
     0: event
     1: condition
     2: action
+  
+  eca_group:
+    0: condition
+    1: then
+    2: else

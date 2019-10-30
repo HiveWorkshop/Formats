@@ -13,6 +13,7 @@ params:
 seq:
   - id: type
     type: u4
+    enum: value_type
   - id: value
     type: strz
     encoding: UTF-8
@@ -27,3 +28,11 @@ seq:
     # 3 = "parameter_type.parameter_type::parameter"
     type: parameter(game, 3)
     if: is_array > 0
+
+enums:
+  value_type:
+    0: preset
+    1: variable
+    2: function
+    3: string
+    4294967295: invalid
